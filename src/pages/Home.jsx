@@ -4,11 +4,14 @@ import HeroSection from '../components/HeroSection'
 import SecondarySection from '../components/SecondarySection'
 import QuickFacts from '../components/QuickFacts'
 import ContactSection from '../components/ContactSection'
+import { Introvideo } from '../components/Introvideo'
 
 export const Home = () => {
   return (
     <div>
       <Navbar />
+      <Introvideo/>
+     
       <HeroSection />
       <SecondarySection/>
       <div className='md:h-[50vh] h-[30vh] w-full relative overflow-hidden bg-black'>

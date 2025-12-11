@@ -3,12 +3,12 @@ import './App.css'
 import { Home } from './pages/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ChannelTables } from './pages/ChannelPackage'
-
-import { NetworkPage } from './pages/NetworkPage'
 import { CPESchemes } from './pages/CpeScheme'
-import { AboutUs } from './Aboutus'
 import BroadcastersDashboard from './components/BroadCaster'
 import { Declare } from './pages/Declare'
+import { AboutUs } from './pages/Aboutus'
+import NetworkPage from './pages/Network'
+
 
 function  App() {
   return (

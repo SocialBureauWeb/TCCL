@@ -3,14 +3,38 @@ import { X, GripVertical, Info, Package, Users, Globe, FileText, ChevronDown } f
 
 // Package Data
 const sunPackages = [
-  { name: "SUN TAMIL BASIC SD", price: 49, channels: ["ADITHYA", "SUN", "CHUTTI", "KTV"] },
-  { name: "SUN ULTIMATE SD", price: 118, channels: ["CHINTU", "UDAYA", "KOCHU", "SURYA", "GEMINI", "KUSHI", "ADITHYA", "SUN", "CHUTTI", "KTV"] },
-  { name: "SUN TAMIL BASIC HD", price: 70, channels: ["ADITHYA", "SUN", "CHUTTI", "KTV", "SUN LIFE", "SUN NEWS"] },
-  { name: "SUN TELUGU BASIC SD", price: 38, channels: ["GEMINI", "KUSHI"] },
-  { name: "SUN KANNADA BASIC SD", price: 35, channels: ["CHINTU", "UDAYA"] },
-  { name: "SUN MALAYALAM BASIC SD", price: 22, channels: ["KOCHU", "SURYA"] },
-  { name: "SUN ULTIMATE HD", price: 140, channels: ["SURYA", "CHINTU", "UDAYA", "KOCHU", "GEMINI", "KUSHI", "ADITHYA", "SUN", "CHUTTI", "KTV"] },
-  { name: "SUN KANNADA PRIME", price: 45, channels: ["CHINTU", "UDAYA", "GEMINI", "SUN", "KTV"] }
+  { name: "SUN TAMIL BASIC SD", price: 49, channels: ["ADITHYA TV", "SUN TV", "CHUTTI TV", "KTV","SUN LIFE","SUN MUSIC","SUNNEWS"] },
+  { name: "SUN ULTIMATE SD", price: 118, channels: ["CHINTU TV", "UDAYA TV", "UDAYA COMEDY", "UDAYA MOVIES", "UDAYA MUSIC", "KOCHU TV", "SURYA TV", "SURYA COMEDY", "SURYA MOVIES", "SURYA MUSIC", "GEMINI TV", "GEMINI COMEDY", "GEMINI LIFE", "GEMINI MOVIES", "GEMINI MUSIC", "KUSHI TV", "ADITHYA TV", "SUN TV", "CHUTTI TV", "KTV", "SUN LIFE", "SUN MUSIC", "SUN NEWS"] },
+  { name: "SUN TAMIL BASIC HD", price: 70, channels: ["ADITHYA TV", "SUN TV HD", "CHUTTI TV", "KTV HD", "SUN LIFE","SUN MUSIC HD", "SUN NEWS"] },
+  { name: "SUN TELUGU BASIC SD", price: 38, channels: ["GEMINI COMEDY","GEMINI LIFE","GEMINI MOVIES","GEMINI TV", "KUSHI TV"] },
+  { name: "SUN KANNADA BASIC SD", price: 35, channels: ["CHINTU TV", "UDAYA TV", "UDAYA COMEDY", "UDAYA MOVIES", "UDAYA MUSIC"] },
+  { name: "SUN MALAYALAM BASIC SD", price: 22, channels: ["KOCHU TV", "SURYA COMEDY", "SURYA MOVIES", "SURYA MUSIC","SURYA TV"] },
+  { name: "SUN ULTIMATE HD", price: 140, channels: [
+      "CHINTU TV",
+      "UDAYA COMEDY",
+      "UDAYA MOVIES",
+      "UDAYA MUSIC",
+      "UDAYA HD",
+      "KOCHU TV",
+      "SURYA TV HD",
+      "SURYA COMEDY",
+      "SURYA MOVIES",
+      "SURYA MUSIC",
+      "GEMINI COMEDY",
+      "GEMINI LIFE",
+      "GEMINI MOVIES HD",
+      "GEMINI MUSIC HD",
+      "GEMINI TV HD",
+      "KUSHI TV",
+      "ADITHYA TV",
+      "SUN TV HD",
+      "CHUTTI TV",
+      "KTV HD",
+      "SUN LIFE",
+      "SUN MUSIC HD",
+      "SUN NEWS"
+    ]},
+  { name: "SUN KANNADA PRIME", price: 45, channels: ["CHINTU TV", "UDAYA TV","UDAYA COMEDY", "UDAYA MOVIES","UDAYA MUSIC",   "GEMINI TV", "SUN TV", "KTV"] }
 ];
 
 const jioStarPackages = [

@@ -1,5 +1,7 @@
+import { title } from 'framer-motion/client'
 import React, { useState, useRef, useEffect } from 'react'
 import { FaUser } from 'react-icons/fa'
+import { href } from 'react-router-dom'
 
 export const Navbar = ({ logo = '/assets/logo.png' }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -21,7 +23,8 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
 
   const menu = [
     { title: 'Home', href: '/' },
-    { title: 'About us', href: '/about' },
+    { title: 'About Us', href: '/about' },
+    {title: 'Contact Us', href:'/contact'},
     { title: 'Regulatory', items: [
         { title: 'TCCL RIO', href: '/assets/pdf1.pdf' },
         { title: 'Declaration Under Section 4(4)', href: '/declaration' },
@@ -65,27 +68,42 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
               <div key={m.title} className="relative group">
                 {m.items ? (
                   <>
-                    <button
-                      onClick={() => setOpenDropdown(openDropdown === m.title ? null : m.title)}
-                      className="flex items-center gap-2 px-2 py-1 hover:opacity-90"
-                      aria-expanded={openDropdown === m.title}
-                    >
-                      {m.title}
-                      <span>▼</span>
-                    </button>
-                    {openDropdown === m.title && (
-                      <div className="absolute left-0 mt-0 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
-                        {m.items.map((it) => (
-                          <a
-                            key={it.title}
-                            href={it.href}
-                            className="block px-4 py-2 hover:bg-blue-100 first:rounded-t-md last:rounded-b-md"
-                          >
-                            {it.title}
-                          </a>
-                        ))}
-                      </div>
-                    )}
+<div key={m.title} className="relative group">
+  {m.items ? (
+    <>
+      {/* Menu title */}
+      <span className="flex items-center gap-2 px-2 py-1 cursor-pointer hover:opacity-90">
+        {m.title}
+      </span>
+
+      {/* Dropdown on hover */}
+      <div
+        className="
+          absolute left-0 mt-2 w-48 bg-white text-gray-800
+          rounded-md shadow-xl z-50
+          opacity-0 invisible
+          group-hover:opacity-100 group-hover:visible
+          transition-all duration-200
+        "
+      >
+        {m.items.map((it) => (
+          <a
+            key={it.title}
+            href={it.href}
+            className="block px-4 py-2 hover:bg-blue-100 first:rounded-t-md last:rounded-b-md"
+          >
+            {it.title}
+          </a>
+        ))}
+      </div>
+    </>
+  ) : (
+    <a href={m.href} className="hover:opacity-90">
+      {m.title}
+    </a>
+  )}
+</div>
+
                   </>
                 ) : (
                   <a href={m.href} className="hover:opacity-90">
@@ -98,26 +116,6 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
 
           {/* Search Icon */}
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => setShowSearch(!showSearch)}
-              className="w-5 h-5 cursor-pointer hover:opacity-90"
-              aria-label="Search"
-            >
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-
-            {showSearch && (
-              <div className="absolute top-16 right-4 z-50">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="px-4 py-2 rounded-lg text-gray-800 w-64"
-                  autoFocus
-                />
-              </div>
-            )}
 
             {/* Operator Login Button - Desktop */}
             <div className="relative">
@@ -132,14 +130,25 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
               </button>
 
               {operatorOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
-                  <button className="block w-full text-left px-4 py-2 hover:bg-blue-100">
-                    TamilNadu
-                  </button>
-                  <button className="block w-full text-left px-4 py-2 hover:bg-blue-100 rounded-b-md">
-                    Karnataka
-                  </button>
-                </div>
+            <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
+                <a
+                  href="https://sms.tccl.co.in/index.php/lco_portal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 hover:bg-blue-100"
+                >
+                  Tamil Nadu
+                </a>
+
+                <a
+                  href="https://sms.kclnetworks.com/index.php/lco_portal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-2 hover:bg-blue-100 rounded-b-md"
+                >
+                  Karnataka
+                </a>
+  </div>
               )}
             </div>
 
@@ -154,13 +163,24 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
               </button>
 
               {operatorOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
-                  <button className="block w-full text-left px-4 py-2 hover:bg-blue-100">
-                    TamilNadu
-                  </button>
-                  <button className="block w-full text-left px-4 py-2 hover:bg-blue-100 rounded-b-md">
+              <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
+                  <a
+                    href="https://sms.tccl.co.in/index.php/lco_portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 hover:bg-blue-100"
+                  >
+                    Tamil Nadu
+                  </a>
+
+                  <a
+                    href="https://sms.kclnetworks.com/index.php/lco_portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 hover:bg-blue-100 rounded-b-md"
+                  >
                     Karnataka
-                  </button>
+                  </a>
                 </div>
               )}
             </div>

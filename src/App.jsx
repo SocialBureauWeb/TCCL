@@ -8,6 +8,7 @@ import BroadcastersDashboard from './components/BroadCaster'
 import { Declare } from './pages/Declare'
 import NetworkPage from './pages/Network'
 import { AboutPage } from './pages/Aboutus'
+import { Contact } from './pages/Contact'
 
 
 function  App() {
@@ -21,7 +22,7 @@ function  App() {
       <Route path='/cpeScheme'element={<CPESchemes/>}/>
       <Route path='/about' element={<AboutPage/>} />
       <Route path='/broadcast' element={<BroadcastersDashboard/>} />
-      
+      <Route path='/contact' element={<Contact/>}/>
       </Routes>
       </BrowserRouter>
   )

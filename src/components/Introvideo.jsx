@@ -10,7 +10,7 @@ export const Introvideo = () => {
   const shrinkScrollAmount = 200 // Total scroll needed to fully shrink
 
 const [videoSrc, setVideoSrc] = useState(
-  'https://youtu.be/KgpnfT5bgLY?si=4WuIArWdZ7OWZiLe&t=47'
+  'https://res.cloudinary.com/dtwcgfmar/video/upload/v1765866051/Leo_-_Ordinary_Person_8K_4K_Video_Song___Thalapathy_Vijay___Trisha___Anirudh_Ravichander_1_bvahvt.mp4'
 )
 
 

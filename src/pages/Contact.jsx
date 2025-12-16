@@ -32,24 +32,37 @@ export const Contact = () => {
   }
 
   function handleSubmit(e) {
-    e.preventDefault();
-    const eobj = validate();
-    setErrors(eobj);
-    if (Object.keys(eobj).length > 0) return;
+  e.preventDefault();
 
-    setStatus("sending");
-    setTimeout(() => {
-      setStatus("sent");
-      setForm({
-        name: "",
-        phone: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      setTimeout(() => setStatus(null), 3000);
-    }, 1200);
-  }
+  const eobj = validate();
+  setErrors(eobj);
+  if (Object.keys(eobj).length > 0) return;
+
+  const mailBody = `
+Name: ${form.name}
+Phone: ${form.phone}
+Email: ${form.email}
+
+Message:
+${form.message}
+  `;
+
+  const mailtoLink = `mailto:customercare@tccl.co.in
+    ?subject=${encodeURIComponent(form.subject)}
+    &body=${encodeURIComponent(mailBody)}`;
+
+  window.location.href = mailtoLink;
+
+  setStatus("sent");
+  setForm({
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+}
+
 
   const address =
     "9A, 5, Club Rd, M.S. Nagar, Mukta Gardens, Chetpet, Chennai, Tamil Nadu 600031";

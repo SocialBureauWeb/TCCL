@@ -9,9 +9,12 @@ export const Introvideo = () => {
   const maxScale = 1
   const shrinkScrollAmount = 200 // Total scroll needed to fully shrink
 
-  const [videoSrc, setVideoSrc] = useState(
-    'https://t9014733918.p.clickup-attachments.com/t9014733918/504f1746-635c-45ba-ada7-6a56702f0831/SSYouTube.online_Jana%20Nayagan%20%E2%80%93%20Thalapathy%20Kacheri%20Lyric%20Video%20Thalapathy%20Vijay%20H%20Vinoth%20Anirudh%20Pooja%20Hegde%20KVN_1080p.mp4'
-  )
+const [videoSrc, setVideoSrc] = useState(
+  'https://youtu.be/KgpnfT5bgLY?si=4WuIArWdZ7OWZiLe&t=47'
+)
+
+
+
   const videoRef = useRef(null)
 
   useEffect(() => {
@@ -130,6 +133,8 @@ export const Introvideo = () => {
         // embed with autoplay muted and no controls
         return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0`
       }
+
+      
     } catch (err) {
       // fallback: return original url
     }

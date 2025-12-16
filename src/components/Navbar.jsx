@@ -24,7 +24,6 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
   const menu = [
     { title: 'Home', href: '/' },
     { title: 'About Us', href: '/about' },
-    {title: 'Contact Us', href:'/contact'},
     { title: 'Regulatory', items: [
         { title: 'TCCL RIO', href: '/assets/pdf1.pdf' },
         { title: 'Declaration Under Section 4(4)', href: '/declaration' },
@@ -42,6 +41,7 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
         { title: 'CAF FORM', href: '/assets/pdf3.pdf' },
       ],
     },
+    {title: 'Contact Us', href:'/contact'},
   ]
 
   return (

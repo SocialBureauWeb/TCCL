@@ -648,31 +648,7 @@ export const CPESchemes = () => {
                       </span>
                     </div>
 
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedScheme(schemeName);
-                      }}
-                      className={`
-                        w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300
-                        flex items-center justify-center gap-2 pointer-events-auto
-                        ${isActive
-                          ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg'
-                          : 'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 hover:shadow-lg'
-                        }
-                      `}
-                    >
-                      {isActive ? (
-                        <>
-                          <span>✓ Selected</span>
-                        </>
-                      ) : (
-                        <>
-                          <span>View Details</span>
-                          <ArrowRight className="w-4 h-4" />
-                        </>
-                      )}
-                    </button>
+                    
 
                     {isActive && (
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 pointer-events-none rounded-2xl" />

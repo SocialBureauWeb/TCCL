@@ -49,6 +49,16 @@ export const ContactSection = () => {
                 Contact Us
               </Link>
             </li>
+                        <li>
+              <Link to="/terms" className="hover:underline">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link to="/privacy" className="hover:underline">
+                Privacy Policy
+              </Link>
+            </li>
           </ul>
         </div>
 

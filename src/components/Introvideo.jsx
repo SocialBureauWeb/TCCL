@@ -1,4 +1,6 @@
+import { video } from 'framer-motion/m'
 import React, { useState, useEffect, useRef } from 'react'
+import { href } from 'react-router-dom'
 
 export const Introvideo = () => {
   const [scale, setScale] = useState(1)
@@ -9,10 +11,7 @@ export const Introvideo = () => {
   const maxScale = 1
   const shrinkScrollAmount = 200 // Total scroll needed to fully shrink
 
-const [videoSrc, setVideoSrc] = useState(
-  'https://res.cloudinary.com/dtwcgfmar/video/upload/v1765866051/Leo_-_Ordinary_Person_8K_4K_Video_Song___Thalapathy_Vijay___Trisha___Anirudh_Ravichander_1_bvahvt.mp4'
-)
-
+const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
 
 
   const videoRef = useRef(null)
@@ -170,11 +169,11 @@ const [videoSrc, setVideoSrc] = useState(
       video:
         'https://youtu.be/s5LOQTaIfpU?si=NdayJalPZvjQ-bC9'
     },  
-    {
-      img: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Reporter_TV_2023.jpg',
-      video:
-        'https://www.youtube.com/live/nObUcHKZEGY?si=4G90YjPN1XZ-Udov'
-    },  
+    // {
+    //   img: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Reporter_TV_2023.jpg',
+    //   video:
+    //     'https://www.youtube.com/live/nObUcHKZEGY?si=4G90YjPN1XZ-Udov'
+    // },  
     {
       img: 'https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/35d117224897cd2336250506aab01b38',
       video:
@@ -312,6 +311,7 @@ const [videoSrc, setVideoSrc] = useState(
                 muted
                 playsInline
                 autoPlay
+                loop
                 style={{
                   width: '100%',
                   borderRadius: '12px 12px 0 0',

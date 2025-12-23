@@ -9,11 +9,14 @@ import { Declare } from './pages/Declare'
 import NetworkPage from './pages/Network'
 import { AboutPage } from './pages/Aboutus'
 import { Contact } from './pages/Contact'
-
+import Terms from './pages/TermsAndConditions'
+import Privacy from './pages/PrivacyPolicy'
+import ScrollToTop from './components/ScrollToTop'
 
 function  App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/declaration' element={<Declare/>} />
@@ -23,6 +26,8 @@ function  App() {
       <Route path='/about' element={<AboutPage/>} />
       <Route path='/broadcast' element={<BroadcastersDashboard/>} />
       <Route path='/contact' element={<Contact/>}/>
+      <Route path='/terms' element={<Terms/>} />
+      <Route path='/privacy' element={<Privacy/>} />
       </Routes>
       </BrowserRouter>
   )

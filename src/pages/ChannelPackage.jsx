@@ -279,13 +279,6 @@ export const ChannelTables = () => {
                     <span className="text-black bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
                       {content[selectedCard].data.length} items
                     </span>
-                    <button
-                      onClick={() => setSelectedCard(null)}
-                      className="text-white text-opacity-80 hover:text-opacity-100 transition p-1 hover:bg-white hover:bg-opacity-10 rounded-full"
-                      title="Close"
-                    >
-                      <X className="w-6 h-6" />
-                    </button>
                   </div>
                 </div>
               </div>
@@ -293,7 +286,7 @@ export const ChannelTables = () => {
               {/* Table */}
               <div className="overflow-x-auto max-h-[500px]">
                 <table className="w-full">
-                  <thead className="bg-gray-50 sticky top-0 z-10">
+                  <thead className="bg-gray-50 top-0 z-10">
                     <tr>
                       {content[selectedCard].columns.map((col, i) => (
                         <th 
@@ -352,22 +345,6 @@ export const ChannelTables = () => {
               {/* Table Footer */}
               <div className="bg-gray-50 px-6 py-4 border-t">
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-                  <div className="flex items-center gap-4">
-                    <span className="text-sm text-gray-600">
-                      Showing: <span className="font-semibold">{content[selectedCard].data.length}</span> of {content[selectedCard].data.length} items
-                    </span>
-                    <span className="hidden sm:inline text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">
-                      {selectedCard}
-                    </span>
-                  </div>
-                  <div className="text-center sm:text-right">
-                    <p className="text-xs text-gray-500">
-                      Data imported from: {selectedCard.replace(/\s+/g, '').toLowerCase()}.js
-                    </p>
-                    <p className="text-xs text-gray-400 mt-1">
-                      Updated: {new Date().toLocaleDateString('en-IN')}
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -392,12 +369,6 @@ export const ChannelTables = () => {
                         <span className="text-black bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">
                           {sec.data.length} items
                         </span>
-                        <button
-                          onClick={() => setSelectedCard(null)}
-                          className="text-white text-opacity-80 hover:text-opacity-100 transition p-1 hover:bg-white hover:bg-opacity-10 rounded-full"
-                          title="Close"
-                        > Moreeeeeee
-                        </button>
                       </div>
                     </div>
                   </div>
@@ -405,7 +376,7 @@ export const ChannelTables = () => {
                   {/* Table */}
                   <div className="overflow-x-auto max-h-[500px]">
                     <table className="w-full">
-                      <thead className="sticky top-0 z-10">
+                      <thead className=" top-0 z-10">
                         <tr>
                           {sec.columns.map((col, i) => (
                             <th 
@@ -464,22 +435,6 @@ export const ChannelTables = () => {
                   {/* Footer */}
                   <div className="bg-gray-50 px-6 py-4 border-t">
                     <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-                      <div className="flex items-center gap-4">
-                        <span className="text-sm text-gray-600">
-                          Showing: <span className="font-semibold">{sec.data.length}</span> of {sec.data.length} items
-                        </span>
-                        <span className="hidden sm:inline text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">
-                          Section {index + 1}
-                        </span>
-                      </div>
-                      <div className="text-center sm:text-right">
-                        <p className="text-xs text-gray-500">
-                          Data imported from: {selectedCard.replace(/\s+/g, '').toLowerCase()}.js
-                        </p>
-                        <p className="text-xs text-gray-400 mt-1">
-                          Updated: {new Date().toLocaleDateString('en-IN')}
-                        </p>
-                      </div>
                     </div>
                   </div>
 

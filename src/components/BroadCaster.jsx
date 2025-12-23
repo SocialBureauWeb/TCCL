@@ -202,24 +202,8 @@ const BouquetModal = ({ bouquet, broadcaster, isOpen, onClose }) => {
               </div>
             </div>
 
-            <div className={`${colors.bg} p-4 rounded-lg border ${colors.border}`}>
-              <p className="text-sm text-gray-600">
-                <strong>Package:</strong> {bouquet.name}
-              </p>
-              <p className="text-sm text-gray-600 mt-2">
-                Premium television package with multiple channels covering entertainment, news, and regional content.
-              </p>
-            </div>
           </div>
           
-          <div className="bg-gray-50 px-6 py-4 border-t flex justify-between">
-            <button onClick={onClose} className="px-4 py-2 text-gray-600 hover:text-gray-800 font-medium">
-              Close
-            </button>
-            <button className={`px-6 py-2 rounded-lg font-medium ${colors.text} ${colors.header} hover:opacity-80 transition`}>
-              Subscribe Now
-            </button>
-          </div>
         </div>
       </div>
     </div>

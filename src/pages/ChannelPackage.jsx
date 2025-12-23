@@ -140,7 +140,6 @@ export const ChannelTables = () => {
         { key: "logo", header: "Logo", isImage: true },
         { key: "drp", header: "DRP" },
         { key: "category", header: "category" },
-        { key: "hd", header: "hd" },
         { key: "language", header: "language" },
       ]
     },

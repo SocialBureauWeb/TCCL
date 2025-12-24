@@ -47,7 +47,7 @@ export const Home = () => {
         for Unlimited Entertainment
       </h4>
 
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <a
           href="tel:04440606666"
           className="inline-flex items-center gap-2
@@ -57,15 +57,27 @@ export const Home = () => {
         >
           Call Us Now
         </a>
-      </div>
+      </div> */}
     </div>
   </div>
 
 </div>
       <SecondarySection/>
-        
+
+{/* FULL WIDTH IMAGE — NO BLACK, NO CUT */}
+<div className="w-full">
+  <img
+    src="/assets/pay222.png"
+    alt="Paytm banner"
+    className="w-full h-auto block"
+  />
+</div>
+
+
+
       <QuickFacts />
      <HeroSection />
+     <br/>
       <ContactSection />
 
     </div>

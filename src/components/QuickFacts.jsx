@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState } from "react";
 
 const stats = [
-  { id: 1, label: "Connections", value: 3000000, icon: "/assets/tccl (3).png" },
-  { id: 2, label: "Channels", value: 500, icon: "/assets/tccl (2).png" },
-  { id: 3, label: "D-Centers", value: 100, icon: "/assets/5.png" },
-  { id: 4, label: "Distributors", value: 2000, icon: "/assets/tccl (1).png" },
+  { id: 1, label: "Connections", value: 3000000, icon: "/assets/TCCL (4).mp4" },
+  { id: 2, label: "Channels", value: 500, icon: "/assets/TCCL (3).mp4" },
+  { id: 3, label: "D-Centers", value: 100, icon: "/assets/TCCL (1).mp4" },
+  { id: 4, label: "Distributors", value: 2000, icon: "/assets/TCCL (2).mp4" },
 ];
 
 const StatCard = ({ icon, label, value }) => {
@@ -35,7 +34,14 @@ const StatCard = ({ icon, label, value }) => {
     <div className="group bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition hover:-translate-y-1">
       {/* ICON */}
       <div className="mx-auto w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center mb-4 group-hover:scale-105 transition">
-        <img src={icon} alt={label} className="h-12 w-12 object-contain" />
+        <video
+          src={icon}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-12 w-12 object-contain"
+        />
       </div>
 
       {/* NUMBER */}

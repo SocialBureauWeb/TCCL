@@ -56,12 +56,64 @@ export const HeroSection = () => {
   );
 
   return (
-    <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-  {/* BACKGROUND IMAGE */}
+//     <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+//   {/* BACKGROUND IMAGE */}
+//   <div
+//     className="absolute inset-0 bg-cover bg-center scale-105"
+//     style={{
+//       backgroundImage: "url('/assets/contact02.png')",
+//     }}
+//   />
+
+//   {/* DARK + BLUE OVERLAY */}
+//   <div className="absolute inset-0 bg-gradient-to-r from-blue-950/85 via-blue-900/70 to-blue-800/60" />
+
+//   {/* CONTENT */}
+//   <div className="relative z-10 max-w-6xl mx-auto px-6 text-white">
+//     <div className="max-w-2xl">
+//       <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+//         We’re Here to Help You
+//       </h1>
+
+//       <p className="text-lg md:text-xl opacity-90 mb-8">
+//         From crystal-clear HD channels to fast broadband,
+//         our support team is always just one call away.
+//       </p>
+
+//       <div className="flex flex-wrap gap-4">
+//         <a
+//           href="tel:04440606666"
+//           className="bg-white text-blue-700 font-semibold px-7 py-3 rounded-full shadow hover:scale-105 transition"
+//         >
+//           Call Support
+//         </a>
+
+//         <a
+//           href="/contact"
+//           className="border border-white/80 px-7 py-3 rounded-full hover:bg-white hover:text-blue-700 transition"
+//         >
+//           Contact Us
+//         </a>
+//       </div>
+//     </div>
+//   </div>
+// </section>
+
+<section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center overflow-hidden">
+  
+  {/* DESKTOP BACKGROUND */}
   <div
-    className="absolute inset-0 bg-cover bg-center scale-105"
+    className="absolute inset-0 hidden md:block bg-cover bg-center scale-105"
     style={{
-      backgroundImage: "url('/assets/set1.jpg')",
+      backgroundImage: "url('/assets/contact02.png')",
+    }}
+  />
+
+  {/* MOBILE BACKGROUND */}
+  <div
+    className="absolute inset-0 block md:hidden bg-cover bg-center"
+    style={{
+      backgroundImage: "url('/assets/man2.png')",
     }}
   />
 
@@ -71,11 +123,11 @@ export const HeroSection = () => {
   {/* CONTENT */}
   <div className="relative z-10 max-w-6xl mx-auto px-6 text-white">
     <div className="max-w-2xl">
-      <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mb-4">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">
         We’re Here to Help You
       </h1>
 
-      <p className="text-lg md:text-xl opacity-90 mb-8">
+      <p className="text-base sm:text-lg md:text-xl opacity-90 mb-8">
         From crystal-clear HD channels to fast broadband,
         our support team is always just one call away.
       </p>
@@ -98,7 +150,6 @@ export const HeroSection = () => {
     </div>
   </div>
 </section>
-
 
   );
 };

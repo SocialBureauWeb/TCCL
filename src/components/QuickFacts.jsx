@@ -1,4 +1,36 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+
+// const stats = [
+//   { id: 1, label: "Connections", value: 3000000, icon: "/assets/TCCL (4).mp4" },
+//   { id: 2, label: "Channels", value: 500, icon: "/assets/TCCL (3).mp4" },
+//   { id: 3, label: "D-Centers", value: 100, icon: "/assets/TCCL (1).mp4" },
+//   { id: 4, label: "Distributors", value: 2000, icon: "/assets/TCCL (2).mp4" },
+// ];
+
+// const StatCard = ({ icon, label, value }) => {
+//   const [count, setCount] = useState(0);
+
+//   // Cute count-up animation
+//   useEffect(() => {
+//     let start = 0;
+//     const end = value;
+//     const duration = 1200;
+//     const step = Math.max(1, Math.floor(end / (duration / 16)));
+
+//     const timer = setInterval(() => {
+//       start += step;
+//       if (start >= end) {
+//         setCount(end);
+//         clearInterval(timer);
+//       } else {
+//         setCount(start);
+//       }
+//     }, 16);
+
+//     return () => clearInterval(timer);
+//   }, [value]);
+
+import React, { useEffect, useState, useRef } from "react";
 
 const stats = [
   { id: 1, label: "Connections", value: 3000000, icon: "/assets/TCCL (4).mp4" },
@@ -7,32 +39,65 @@ const stats = [
   { id: 4, label: "Distributors", value: 2000, icon: "/assets/TCCL (2).mp4" },
 ];
 
-const StatCard = ({ icon, label, value }) => {
+const StatCard = ({ icon, label, value, suffix }) => {
   const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
 
-  // Cute count-up animation
+  // Intersection Observer for scroll-triggered animation
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const formatNumber = (num) => {
+  if (num >= 1_000_000) return (num / 1_000_000).toFixed(0) + "M";
+  if (num >= 1_000) return (num / 1_000).toFixed(0) + "K";
+  return num.toString();
+};
+
+
+  // Smooth count-up animation
+  useEffect(() => {
+    if (!isVisible) return;
+
     let start = 0;
     const end = value;
-    const duration = 1200;
+    const duration = 2000;
     const step = Math.max(1, Math.floor(end / (duration / 16)));
+    let current = 0;
 
     const timer = setInterval(() => {
-      start += step;
-      if (start >= end) {
+      current += step;
+      if (current >= end) {
         setCount(end);
         clearInterval(timer);
       } else {
-        setCount(start);
+        setCount(current);
       }
     }, 16);
 
     return () => clearInterval(timer);
-  }, [value]);
-
+  }, [isVisible, value]);
   return (
-    <div className="group bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition hover:-translate-y-1">
-      {/* ICON */}
+      <div
+  ref={cardRef}
+  className="group bg-white rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition hover:-translate-y-1"
+>
+
       <div className="mx-auto w-20 h-20 rounded-full bg-blue-50 flex items-center justify-center mb-4 group-hover:scale-105 transition">
         <video
           src={icon}
@@ -44,11 +109,9 @@ const StatCard = ({ icon, label, value }) => {
         />
       </div>
 
-      {/* NUMBER */}
-      <div className="text-3xl font-extrabold text-[#1a89e5]">
-        {count.toLocaleString()}
-        {label === "Connections" && "+"}
-      </div>
+<div className="text-3xl font-extrabold text-[#1a89e5]">
+  {formatNumber(count)}{suffix}
+</div>
 
       {/* LABEL */}
       <div className="mt-1 text-sm font-medium text-slate-600 uppercase tracking-wide">
@@ -77,12 +140,14 @@ export default function QuickFacts() {
         {/* STATS GRID */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s) => (
-            <StatCard
-              key={s.id}
-              icon={s.icon}
-              label={s.label}
-              value={s.value}
-            />
+<StatCard
+  key={s.id}
+  icon={s.icon}
+  label={s.label}
+  value={s.value}
+  suffix={s.suffix}
+/>
+
           ))}
         </div>
       </div>

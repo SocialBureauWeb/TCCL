@@ -118,7 +118,7 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
           <div className="flex items-center gap-4">
 
             {/* Operator Login Button - Desktop */}
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={() => setOperatorOpen(!operatorOpen)}
                 className="hidden md:inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-1 rounded-full font-medium shadow-sm hover:brightness-95"
@@ -150,10 +150,10 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
                 </a>
   </div>
               )}
-            </div>
+            </div> */}
 
             {/* Mobile operator button on the right */}
-            <div className="relative md:hidden">
+            {/* <div className="relative md:hidden">
               <button
                 onClick={() => setOperatorOpen(!operatorOpen)}
                 className="md:hidden p-2 text-black hover:bg-white/10 rounded-lg"
@@ -183,7 +183,73 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
                   </a>
                 </div>
               )}
-            </div>
+            </div> */}
+
+            <div className="relative hidden md:block">
+  <button
+    onClick={() => setOperatorOpen(!operatorOpen)}
+    className="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-1 rounded-full font-medium shadow-sm hover:brightness-95"
+    aria-expanded={operatorOpen}
+    aria-haspopup="menu"
+  >
+    <FaUser size={16} />
+    Operator Login
+  </button>
+
+  {operatorOpen && (
+    <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
+      <a
+        href="https://sms.tccl.co.in/index.php/lco_portal"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block px-4 py-2 hover:bg-blue-100 rounded-t-md"
+      >
+        Tamil Nadu
+      </a>
+      <a
+        href="https://sms.kclnetworks.com/index.php/lco_portal"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block px-4 py-2 hover:bg-blue-100 rounded-b-md"
+      >
+        Karnataka
+      </a>
+    </div>
+  )}
+</div>
+
+{/* Mobile operator button - ONLY ONE */}
+<div className="relative md:hidden">
+  <button
+    onClick={() => setOperatorOpen(!operatorOpen)}
+    className="p-2 text-black hover:bg-white/10 rounded-lg"
+    aria-label="Operator"
+  >
+    <FaUser size={20} />
+  </button>
+
+  {operatorOpen && (
+    <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
+      <a
+        href="https://sms.tccl.co.in/index.php/lco_portal"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block px-4 py-2 hover:bg-blue-100 rounded-t-md"
+      >
+        Tamil Nadu
+      </a>
+      <a
+        href="https://sms.kclnetworks.com/index.php/lco_portal"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block px-4 py-2 hover:bg-blue-100 rounded-b-md"
+      >
+        Karnataka
+      </a>
+    </div>
+  )}
+</div>
+
           </div>
         </div>
 

@@ -278,20 +278,22 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
     return () => stopThumbAutoScroll()
   }, [scrollLocked])
 
-  if (isMobile) {
-    return (
-      <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-        <div style={{ width: '100%', maxWidth: 900, padding: 10 }}>
-          {/* <img
-            src={mobileImage}
-            alt="preview"
-            style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }}
-          /> */}
-        </div>
-      </div>
-    )
-  }
-
+  // if (isMobile) {
+  //   return (
+  //     <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+  //       <div style={{ width: '100%', maxWidth: 900, padding: 10 }}>
+  //         {/* <img
+  //           src={mobileImage}
+  //           alt="preview"
+  //           style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }}
+  //         /> */}
+  //       </div>
+  //     </div>
+  //   )
+  // }
+if (isMobile) {
+  return null  // Returns absolutely nothing - zero space
+}
   return (
     <>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', maxHeight: '108vh' }}>
@@ -419,6 +421,7 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
     />
   </div>
 )}
+
       {/* popup image shown at bottom center for 1s when a thumbnail is clicked */}
       <div
         aria-hidden={!popupVisible}

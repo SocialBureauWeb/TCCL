@@ -15,6 +15,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 function  App() {
   return (
+    // <div className="dark bg-black text-white min-h-screen">
     <BrowserRouter>
     <ScrollToTop/>
     <Routes>
@@ -30,6 +31,7 @@ function  App() {
       <Route path='/privacy' element={<Privacy/>} />
       </Routes>
       </BrowserRouter>
+    // </div>
   )
 }
 

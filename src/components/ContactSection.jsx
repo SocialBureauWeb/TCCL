@@ -1,11 +1,11 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export const ContactSection = () => {
   return (
-    <section className="bg-[#1187e6] text-white py-12">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <>
+      <section className="bg-[#1187e6] text-white py-12">
+<div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* CONTACT DETAILS */}
         <div>
@@ -78,9 +78,19 @@ export const ContactSection = () => {
           </Link>
         </div>
 
+
+      
       </div>
 
+        <div className="max-w-6xl mx-auto px-6 pt-4">
+          <img
+            src="/assets/footer.jpg" // Change to your image path
+            alt="Contact us for premium services"
+            className="w-full h-auto max-h-[700px] object-contain rounded-lg"
+          />
+        </div>
     </section>
+    </>
   );
 };
 

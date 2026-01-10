@@ -34,89 +34,103 @@ export default function NetworkPage() {
 
   return (
     <div>
-      <Navbar/>
-    <div className="font-sans bg-white text-gray-800">
-      {/* HERO SECTION */}
-    <section className="bg-gradient-to-br from-[#1a89e5] via-[#0083edff] to-blue-900 text-white pt-28 pb-24 px-6">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Important Notice for TCCL Consumers
-        </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-95">
-          Telecom Regulatory Authority of India (TRAI) Compliance Notice
-        </p>
-      </div>
-    </section>
-
-      {/* REGULATORY REFERENCE */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">TRAI Regulatory Compliance</h2>
-            <p className="text-gray-600 mb-6">
-              Pursuant to "THE TELECOMMUNICATION (BROADCASTING AND CABLE) SERVICES (EIGHTH) (ADDRESSABLE SYSTEMS) TARIFF (SECOND AMENDMENT) ORDER, 2020 (No. 1 of 2020)" of Telecom Regulatory Authority of India (TRAI)
-            </p>
-            <p className="text-gray-600">
-              Customers will have to pay for the Pay Channels and Network Capacity Fee (NCF) as mentioned below:
+      <div className="font-sans bg-black text-white">
+        <Navbar />
+        {/* HERO SECTION */}
+        <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white pt-28 pb-24 px-6 border-b border-white/10">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-4xl md:text-6xl font-bold mb-4"
+            >
+              Important Notice for <span className="text-blue-500">TCCL</span> Consumers
+            </motion.h1>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto text-gray-400">
+              Telecom Regulatory Authority of India (TRAI) Compliance Notice
             </p>
           </div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white shadow-xl rounded-xl p-8 border-l-4 border-[#1a89e5]"
-          >
-            <h3 className="font-bold [#1a89e5] text-lg mb-4">Key Points</h3>
-            <ul className="text-gray-700 space-y-2 text-sm">
-              <li>✓ Flexible Channel Selection</li>
-              <li>✓ Transparent Pricing</li>
-              <li>✓ Mandatory Government Channels</li>
-              <li>✓ GST as per Norms</li>
-            </ul>
-          </motion.div>
-        </div>
-      </section>
+        </section>
 
-      {/* PRICING GRID */}
-      <section className="py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Network Capacity Fee (NCF) Structure</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Choose your package based on the number of channels you want to subscribe to
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {pricingPoints.map((point, idx) => (
-            <div key={idx} className="bg-[#1a89e5] text-white p-8 rounded-xl shadow-lg hover:scale-105 transition">
-              <h3 className="font-bold text-xl mb-3">{point.title}</h3>
-              <p className="text-sm opacity-90">{point.desc}</p>
+        {/* REGULATORY REFERENCE */}
+        <section className="py-20 px-6 bg-black border-b border-white/10">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-4 text-white">TRAI Regulatory Compliance</h2>
+              <p className="text-gray-400 mb-6 font-display leading-relaxed">
+                Pursuant to "THE TELECOMMUNICATION (BROADCASTING AND CABLE) SERVICES (EIGHTH) (ADDRESSABLE SYSTEMS) TARIFF (SECOND AMENDMENT) ORDER, 2020 (No. 1 of 2020)" of Telecom Regulatory Authority of India (TRAI)
+              </p>
+              <p className="text-gray-400 font-display">
+                Customers will have to pay for the Pay Channels and Network Capacity Fee (NCF) as mentioned below:
+              </p>
             </div>
-          ))}
-        </div>
-      </section>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-gray-900 shadow-2xl rounded-2xl p-8 border border-white/10 border-l-4 border-blue-500"
+            >
+              <h3 className="font-bold text-blue-500 text-xl mb-4">Key Points</h3>
+              <ul className="text-gray-300 space-y-3 text-sm font-display">
+                <li className="flex items-center gap-2"><CheckCircle size={16} className="text-blue-500" /> Flexible Channel Selection</li>
+                <li className="flex items-center gap-2"><CheckCircle size={16} className="text-blue-500" /> Transparent Pricing</li>
+                <li className="flex items-center gap-2"><CheckCircle size={16} className="text-blue-500" /> Mandatory Government Channels</li>
+                <li className="flex items-center gap-2"><CheckCircle size={16} className="text-blue-500" /> GST as per Norms</li>
+              </ul>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* ADDITIONAL INFORMATION */}
-      <section className="py-20 px-6 bg-gray-50 text-center">
-        <h2 className="text-3xl font-bold mb-4">Additional Information & Requirements</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Important terms and conditions for all subscribers
-        </p>
+        {/* PRICING GRID */}
+        <section className="py-20 px-6 text-center bg-gray-950">
+          <h2 className="text-3xl font-bold mb-4 text-white">Network Capacity Fee (NCF) Structure</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12 font-display">
+            Choose your package based on the number of channels you want to subscribe to
+          </p>
 
-        <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
-          {additionalPoints.map((point, idx) => {
-            const Icon = point.icon;
-            return (
-              <div key={idx} className="bg-[#1a89e5] text-white p-6 rounded-xl shadow-lg hover:scale-105 transition">
-                <Icon className="mx-auto h-10 w-10 mb-3" />
-                <h3 className="font-bold text-lg mb-2">{point.title}</h3>
-                <p className="text-xs opacity-90">{point.desc}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {pricingPoints.map((point, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ y: -5 }}
+                className="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-8 rounded-2xl shadow-xl transition-all"
+              >
+                <h3 className="font-bold text-xl mb-3 font-display">{point.title}</h3>
+                <p className="text-sm opacity-90 leading-relaxed">{point.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
 
-      {/* BOTTOM CTA */}
-      {/* <section className="py-20 px-6 bg-[#1a89e5] text-white text-center">
+        {/* ADDITIONAL INFORMATION */}
+        <section className="py-20 px-6 bg-black text-center border-t border-white/10">
+          <h2 className="text-3xl font-bold mb-4 text-white">Additional Information & Requirements</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12 font-display">
+            Important terms and conditions for all subscribers
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+            {additionalPoints.map((point, idx) => {
+              const Icon = point.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-gray-900 border border-white/5 text-white p-6 rounded-2xl shadow-2xl transition-all group"
+                >
+                  <div className="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/20 transition-colors">
+                    <Icon className="h-8 w-8 text-blue-500" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 font-display">{point.title}</h3>
+                  <p className="text-xs text-gray-400 leading-relaxed">{point.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* BOTTOM CTA */}
+        {/* <section className="py-20 px-6 bg-[#1a89e5] text-white text-center">
         <h2 className="text-4xl font-bold mb-6">Need More Information?</h2>
         <p className="text-lg max-w-2xl mx-auto mb-8">
           For additional details about TCCL services and channel pricing, contact our support team or visit the CONSUMER INFO Channel at LCN - 999.
@@ -125,10 +139,10 @@ export default function NetworkPage() {
           044 - 4060 6666
         </button>
       </section> */}
-      <br/>
+        <br />
 
-        </div>
-    <ContactSection/>
-  </div>
+      </div>
+      <ContactSection />
+    </div>
   );
 }

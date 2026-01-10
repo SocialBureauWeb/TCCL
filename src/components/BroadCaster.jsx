@@ -3,13 +3,14 @@ import { X, GripVertical, Info, Package, Users, Globe, FileText, ChevronDown } f
 
 // Package Data
 const sunPackages = [
-  { name: "SUN TAMIL BASIC SD", price: 49, channels: ["ADITHYA TV", "SUN TV", "CHUTTI TV", "KTV","SUN LIFE","SUN MUSIC","SUNNEWS"] },
+  { name: "SUN TAMIL BASIC SD", price: 49, channels: ["ADITHYA TV", "SUN TV", "CHUTTI TV", "KTV", "SUN LIFE", "SUN MUSIC", "SUNNEWS"] },
   { name: "SUN ULTIMATE SD", price: 118, channels: ["CHINTU TV", "UDAYA TV", "UDAYA COMEDY", "UDAYA MOVIES", "UDAYA MUSIC", "KOCHU TV", "SURYA TV", "SURYA COMEDY", "SURYA MOVIES", "SURYA MUSIC", "GEMINI TV", "GEMINI COMEDY", "GEMINI LIFE", "GEMINI MOVIES", "GEMINI MUSIC", "KUSHI TV", "ADITHYA TV", "SUN TV", "CHUTTI TV", "KTV", "SUN LIFE", "SUN MUSIC", "SUN NEWS"] },
-  { name: "SUN TAMIL BASIC HD", price: 70, channels: ["ADITHYA TV", "SUN TV HD", "CHUTTI TV", "KTV HD", "SUN LIFE","SUN MUSIC HD", "SUN NEWS"] },
-  { name: "SUN TELUGU BASIC SD", price: 38, channels: ["GEMINI COMEDY","GEMINI LIFE","GEMINI MOVIES","GEMINI TV", "KUSHI TV"] },
+  { name: "SUN TAMIL BASIC HD", price: 70, channels: ["ADITHYA TV", "SUN TV HD", "CHUTTI TV", "KTV HD", "SUN LIFE", "SUN MUSIC HD", "SUN NEWS"] },
+  { name: "SUN TELUGU BASIC SD", price: 38, channels: ["GEMINI COMEDY", "GEMINI LIFE", "GEMINI MOVIES", "GEMINI TV", "KUSHI TV"] },
   { name: "SUN KANNADA BASIC SD", price: 35, channels: ["CHINTU TV", "UDAYA TV", "UDAYA COMEDY", "UDAYA MOVIES", "UDAYA MUSIC"] },
-  { name: "SUN MALAYALAM BASIC SD", price: 22, channels: ["KOCHU TV", "SURYA COMEDY", "SURYA MOVIES", "SURYA MUSIC","SURYA TV"] },
-  { name: "SUN ULTIMATE HD", price: 140, channels: [
+  { name: "SUN MALAYALAM BASIC SD", price: 22, channels: ["KOCHU TV", "SURYA COMEDY", "SURYA MOVIES", "SURYA MUSIC", "SURYA TV"] },
+  {
+    name: "SUN ULTIMATE HD", price: 140, channels: [
       "CHINTU TV",
       "UDAYA COMEDY",
       "UDAYA MOVIES",
@@ -33,8 +34,9 @@ const sunPackages = [
       "SUN LIFE",
       "SUN MUSIC HD",
       "SUN NEWS"
-    ]},
-  { name: "SUN KANNADA PRIME", price: 45, channels: ["CHINTU TV", "UDAYA TV","UDAYA COMEDY", "UDAYA MOVIES","UDAYA MUSIC",   "GEMINI TV", "SUN TV", "KTV"] }
+    ]
+  },
+  { name: "SUN KANNADA PRIME", price: 45, channels: ["CHINTU TV", "UDAYA TV", "UDAYA COMEDY", "UDAYA MOVIES", "UDAYA MUSIC", "GEMINI TV", "SUN TV", "KTV"] }
 ];
 
 const jioStarPackages = [
@@ -118,8 +120,8 @@ const discoveryPackages = [
 
 const broadcasters = [
   { id: 1, name: "KAL Media Services Private Limited", color: "blue", description: "Leading media services provider", bouquets: sunPackages },
-  { id: 2, name: "JIO STAR INDIA PRIVATE LIMITED", color: "red", description: "Digital entertainment giant", bouquets: jioStarPackages },
-  { id: 3, name: "ZEE Entertainment Enterprises Limited", color: "orange", description: "Leading Indian media conglomerate", bouquets: zeePackages },
+  { id: 2, name: "JIO STAR INDIA PRIVATE LIMITED", color: "cyan", description: "Digital entertainment giant", bouquets: jioStarPackages },
+  { id: 3, name: "ZEE Entertainment Enterprises Limited", color: "sky", description: "Leading Indian media conglomerate", bouquets: zeePackages },
   { id: 4, name: "Culver Max Entertainment Pvt Ltd", color: "purple", description: "Formerly Sony Pictures Networks", bouquets: culverMaxPackages },
   { id: 5, name: "Bennett and Coleman Company Ltd", color: "green", description: "Times Group media company", bouquets: bennettColemanPackages },
   { id: 6, name: "Warner Media India Private Limited", color: "indigo", description: "Global entertainment leader", bouquets: warnerMediaPackages },
@@ -136,64 +138,64 @@ const broadcasters = [
 ];
 
 const colorClasses = {
-  blue: { bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-700", header: "bg-blue-100" },
-  red: { bg: "bg-red-50", border: "border-red-200", text: "text-red-700", header: "bg-red-100" },
-  orange: { bg: "bg-orange-50", border: "border-orange-200", text: "text-orange-700", header: "bg-orange-100" },
-  purple: { bg: "bg-purple-50", border: "border-purple-200", text: "text-purple-700", header: "bg-purple-100" },
-  green: { bg: "bg-green-50", border: "border-green-200", text: "text-green-700", header: "bg-green-100" },
-  indigo: { bg: "bg-indigo-50", border: "border-indigo-200", text: "text-indigo-700", header: "bg-indigo-100" },
-  teal: { bg: "bg-teal-50", border: "border-teal-200", text: "text-teal-700", header: "bg-teal-100" },
-  pink: { bg: "bg-pink-50", border: "border-pink-200", text: "text-pink-700", header: "bg-pink-100" },
-  yellow: { bg: "bg-yellow-50", border: "border-yellow-200", text: "text-yellow-700", header: "bg-yellow-100" },
-  rose: { bg: "bg-rose-50", border: "border-rose-200", text: "text-rose-700", header: "bg-rose-100" },
-  cyan: { bg: "bg-cyan-50", border: "border-cyan-200", text: "text-cyan-700", header: "bg-cyan-100" },
-  amber: { bg: "bg-amber-50", border: "border-amber-200", text: "text-amber-700", header: "bg-amber-100" },
-  lime: { bg: "bg-lime-50", border: "border-lime-200", text: "text-lime-700", header: "bg-lime-100" },
-  violet: { bg: "bg-violet-50", border: "border-violet-200", text: "text-violet-700", header: "bg-violet-100" },
-  emerald: { bg: "bg-emerald-50", border: "border-emerald-200", text: "text-emerald-700", header: "bg-emerald-100" },
-  sky: { bg: "bg-sky-50", border: "border-sky-200", text: "text-sky-700", header: "bg-sky-100" }
+  blue: { bg: "bg-blue-900/10", border: "border-blue-900/30", text: "text-blue-400", header: "bg-blue-900/40" },
+  red: { bg: "bg-cyan-900/10", border: "border-cyan-900/30", text: "text-cyan-400", header: "bg-cyan-900/40" },
+  orange: { bg: "bg-blue-900/10", border: "border-blue-900/30", text: "text-blue-400", header: "bg-blue-900/40" },
+  purple: { bg: "bg-purple-900/10", border: "border-purple-900/30", text: "text-purple-400", header: "bg-purple-900/40" },
+  green: { bg: "bg-green-900/10", border: "border-green-900/30", text: "text-green-400", header: "bg-green-900/40" },
+  indigo: { bg: "bg-indigo-900/10", border: "border-indigo-900/30", text: "text-indigo-400", header: "bg-indigo-900/40" },
+  teal: { bg: "bg-teal-900/10", border: "border-teal-900/30", text: "text-teal-400", header: "bg-teal-900/40" },
+  pink: { bg: "bg-pink-900/10", border: "border-pink-900/30", text: "text-pink-400", header: "bg-pink-900/40" },
+  yellow: { bg: "bg-yellow-900/10", border: "border-yellow-900/30", text: "text-yellow-400", header: "bg-yellow-900/40" },
+  rose: { bg: "bg-rose-900/10", border: "border-rose-900/30", text: "text-rose-400", header: "bg-rose-900/40" },
+  cyan: { bg: "bg-cyan-900/10", border: "border-cyan-900/30", text: "text-cyan-400", header: "bg-cyan-900/40" },
+  amber: { bg: "bg-amber-900/10", border: "border-amber-900/30", text: "text-amber-400", header: "bg-amber-900/40" },
+  lime: { bg: "bg-lime-900/10", border: "border-lime-900/30", text: "text-lime-400", header: "bg-lime-900/40" },
+  violet: { bg: "bg-violet-900/10", border: "border-violet-900/30", text: "text-violet-400", header: "bg-violet-900/40" },
+  emerald: { bg: "bg-emerald-900/10", border: "border-emerald-900/30", text: "text-emerald-400", header: "bg-emerald-900/40" },
+  sky: { bg: "bg-sky-900/10", border: "border-sky-900/30", text: "text-sky-400", header: "bg-sky-900/40" }
 };
 
 const BouquetModal = ({ bouquet, broadcaster, isOpen, onClose }) => {
   if (!isOpen || !bouquet) return null;
-  
+
   const colors = colorClasses[broadcaster.color];
-  
+
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      
+      <div className="fixed inset-0 bg-black/80 backdrop-blur-sm" onClick={onClose} />
+
       <div className="flex min-h-full items-center justify-center p-4">
-        <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
-          <div className={`${colors.header} p-6`}>
+        <div className="relative bg-gray-900 border border-white/10 rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+          <div className={`${colors.header} p-6 border-b border-white/5`}>
             <div className="flex justify-between items-start">
               <div>
                 <h2 className={`text-2xl font-bold ${colors.text}`}>{bouquet.name}</h2>
-                <p className="text-gray-700 mt-2">{broadcaster.name}</p>
+                <p className="text-gray-400 mt-2 text-sm">{broadcaster.name}</p>
               </div>
-              <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+              <button onClick={onClose} className="text-gray-500 hover:text-white transition-colors">
                 <X className="h-6 w-6" />
               </button>
             </div>
           </div>
-          
+
           <div className="p-6">
             <div className="mb-6">
-              <p className="text-gray-600 text-sm mb-2">Monthly Price</p>
-              <p className="text-4xl font-bold text-gray-900">₹{bouquet.price}</p>
-              <p className="text-gray-500 text-sm mt-1">per month</p>
+              <p className="text-gray-500 text-xs uppercase tracking-wider mb-2">Monthly Price</p>
+              <p className="text-4xl font-bold text-white">₹{bouquet.price}</p>
+              <p className="text-gray-400 text-sm mt-1">per month</p>
             </div>
 
-            <div className="bg-gray-50 p-4 rounded-lg mb-6">
-              <h3 className="font-semibold text-gray-800 mb-3 flex items-center gap-2">
-                <Globe className="h-5 w-5" /> Channels Included
+            <div className="bg-black/40 p-5 rounded-xl border border-white/5 mb-6">
+              <h3 className="font-semibold text-gray-300 mb-4 flex items-center gap-2">
+                <Globe className="h-5 w-5 text-blue-500" /> Channels Included
               </h3>
-              <div className="space-y-2 max-h-64 overflow-y-auto">
+              <div className="space-y-2 max-h-64 overflow-y-auto custom-scrollbar">
                 {bouquet.channels?.length > 0 ? (
                   bouquet.channels.map((channel, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                      <span className="text-gray-700 text-sm">{channel}</span>
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-1.5 h-1.5 bg-blue-500/50 rounded-full"></div>
+                      <span className="text-gray-400 text-sm">{channel}</span>
                     </div>
                   ))
                 ) : (
@@ -203,7 +205,7 @@ const BouquetModal = ({ bouquet, broadcaster, isOpen, onClose }) => {
             </div>
 
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -213,37 +215,44 @@ const BouquetModal = ({ bouquet, broadcaster, isOpen, onClose }) => {
 const CollapsibleBroadcaster = ({ broadcaster, onBouquetClick }) => {
   const [expanded, setExpanded] = useState(false);
   const colors = colorClasses[broadcaster.color];
-  
+
   return (
-    <div className={`border-b ${colors.border}`}>
-      <div 
-        className="flex items-center gap-3 p-4 cursor-pointer hover:bg-gray-50 transition" 
+    <div className={`border-b border-white/5`}>
+      <div
+        className="flex items-center gap-4 p-5 cursor-pointer hover:bg-white/5 transition-all group"
         onClick={() => setExpanded(!expanded)}
       >
-        <GripVertical className="h-5 w-5 text-gray-400 flex-shrink-0" />
+        <GripVertical className="h-5 w-5 text-gray-600 group-hover:text-gray-400 flex-shrink-0" />
         <div className="flex-1">
-          <h3 className={`font-semibold text-lg ${colors.text}`}>{broadcaster.name}</h3>
-          <p className="text-sm text-gray-600">{broadcaster.description}</p>
+          <h3 className={`font-bold text-lg ${colors.text}`}>{broadcaster.name}</h3>
+          <p className="text-sm text-gray-500">{broadcaster.description}</p>
         </div>
-        <ChevronDown className={`h-5 w-5 text-gray-400 transition-transform flex-shrink-0 ${expanded ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`h-5 w-5 text-gray-500 transition-transform flex-shrink-0 ${expanded ? 'rotate-180 text-blue-500' : ''}`} />
       </div>
-      
+
       {expanded && (
-        <div className={`${colors.bg} border-t ${colors.border} p-6`}>
-          <h4 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-            <Package className="h-5 w-5" /> Available Bouquets ({broadcaster.bouquets.length})
+        <div className={`${colors.bg} border-t border-white/5 p-8`}>
+          <h4 className="font-bold text-white mb-6 flex items-center gap-2 uppercase tracking-widest text-xs">
+            <Package className="h-4 w-4 text-blue-500" /> Available Bouquets ({broadcaster.bouquets.length})
           </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {broadcaster.bouquets.map((bouquet, idx) => (
-              <div 
+              <div
                 key={idx}
                 onClick={() => onBouquetClick(bouquet, broadcaster)}
-                className="bg-white border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:shadow-lg hover:border-gray-300 transition transform hover:scale-105"
+                className="bg-gray-900/50 border border-white/10 rounded-xl p-5 cursor-pointer hover:border-blue-500/50 hover:bg-gray-900 transition-all transform hover:-translate-y-1 shadow-xl"
               >
-                <h5 className={`font-semibold ${colors.text} mb-2 text-sm line-clamp-2`}>{bouquet.name}</h5>
-                <p className="text-2xl font-bold text-gray-900">₹{bouquet.price}</p>
-                <p className="text-xs text-gray-500 mt-1">/Month</p>
-                <p className="text-xs text-gray-400 mt-2">{bouquet.channels?.length || 0} channels</p>
+                <h5 className={`font-bold ${colors.text} mb-3 text-sm line-clamp-1`}>{bouquet.name}</h5>
+                <div className="flex items-end gap-1">
+                  <p className="text-3xl font-black text-white">₹{bouquet.price}</p>
+                  <p className="text-xs text-gray-500 mb-1.5">/Month</p>
+                </div>
+                <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/5">
+                  <p className="text-xs text-gray-400 font-medium uppercase">{bouquet.channels?.length || 0} channels</p>
+                  <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center">
+                    <ChevronDown className="h-3 w-3 text-blue-500 -rotate-90" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -271,12 +280,12 @@ export default function BroadcastersDashboard() {
   const handleDrop = (e, dropIndex) => {
     e.preventDefault();
     if (draggedItem === null || draggedItem === dropIndex) return;
-    
+
     const newList = [...list];
     const draggedBroadcaster = newList[draggedItem];
     newList.splice(draggedItem, 1);
     newList.splice(dropIndex, 0, draggedBroadcaster);
-    
+
     setList(newList);
     setDraggedItem(null);
   };
@@ -287,14 +296,14 @@ export default function BroadcastersDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Broadcasters Dashboard</h1>
-          <p className="text-gray-600">Drag to reorder, click to expand and view bouquets</p>
+    <div className="min-h-screen bg-black text-white">
+      <div className="max-w-4xl mx-auto px-4 py-20 pb-20 pt-32">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Broadcasters <span className="text-blue-500">Dashboard</span></h1>
+          <p className="text-gray-400 font-display">Drag to reorder broadcasters and explore their premium bouquet offerings</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg border overflow-hidden">
+        <div className="bg-gray-900/50 rounded-3xl shadow-2xl border border-white/10 overflow-hidden backdrop-blur-xl">
           {list.map((broadcaster, index) => (
             <div
               key={broadcaster.id}
@@ -302,26 +311,34 @@ export default function BroadcastersDashboard() {
               onDragStart={(e) => handleDragStart(e, index)}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, index)}
-              className={draggedItem === index ? "opacity-50" : ""}
+              className={`${draggedItem === index ? "opacity-20 bg-blue-500/10" : ""} transition-all`}
             >
               <CollapsibleBroadcaster broadcaster={broadcaster} onBouquetClick={handleBouquetClick} />
             </div>
           ))}
         </div>
 
-        <p className="text-center text-gray-500 text-sm mt-6">
-          Total Broadcasters: {list.length} | Total Packages: {list.reduce((acc, b) => acc + b.bouquets.length, 0)}
-        </p>
+        <div className="flex items-center justify-center gap-8 mt-10">
+          <div className="text-center">
+            <p className="text-2xl font-black text-blue-500">{list.length}</p>
+            <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">Broadcasters</p>
+          </div>
+          <div className="w-px h-8 bg-white/10"></div>
+          <div className="text-center">
+            <p className="text-2xl font-black text-blue-500">{list.reduce((acc, b) => acc + b.bouquets.length, 0)}</p>
+            <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">Total Packages</p>
+          </div>
+        </div>
       </div>
 
-      <BouquetModal 
-        bouquet={selectedBouquet} 
+      <BouquetModal
+        bouquet={selectedBouquet}
         broadcaster={selectedBroadcaster}
-        isOpen={!!selectedBouquet} 
+        isOpen={!!selectedBouquet}
         onClose={() => {
           setSelectedBouquet(null);
           setSelectedBroadcaster(null);
-        }} 
+        }}
       />
     </div>
   );

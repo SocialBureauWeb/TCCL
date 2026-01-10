@@ -30,7 +30,7 @@ export default function ScrollBanner() {
   };
 
   return (
-    <section className="w-full h-screen overflow-hidden bg-white m-0 p-0">
+    <section className="w-full h-screen overflow-hidden bg-black m-0 p-0">
       <div className="relative w-full h-full">
 
         {images.map((src, index) => (

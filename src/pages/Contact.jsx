@@ -32,13 +32,13 @@ export const Contact = () => {
   }
 
   function handleSubmit(e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  const eobj = validate();
-  setErrors(eobj);
-  if (Object.keys(eobj).length > 0) return;
+    const eobj = validate();
+    setErrors(eobj);
+    if (Object.keys(eobj).length > 0) return;
 
-  const mailBody = `
+    const mailBody = `
 Name: ${form.name}
 Phone: ${form.phone}
 Email: ${form.email}
@@ -47,21 +47,21 @@ Message:
 ${form.message}
   `;
 
-  const mailtoLink = `mailto:customercare@tccl.co.in
+    const mailtoLink = `mailto:customercare@tccl.co.in
     ?subject=${encodeURIComponent(form.subject)}
     &body=${encodeURIComponent(mailBody)}`;
 
-  window.location.href = mailtoLink;
+    window.location.href = mailtoLink;
 
-  setStatus("sent");
-  setForm({
-    name: "",
-    phone: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-}
+    setStatus("sent");
+    setForm({
+      name: "",
+      phone: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  }
 
 
   const address =
@@ -70,23 +70,27 @@ ${form.message}
   const phones = ["044 - 4060 6666", "1800-102-9845"];
 
   return (
-    <div className="font-sans bg-white text-gray-800">
+    <div className="font-sans bg-black text-white">
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-[#1a89e5] via-[#0083edff] to-blue-900 text-white pt-28 pb-24 px-6">
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white pt-28 pb-24 px-6 border-b border-white/10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Contact TCCL
-          </h1>
-          <p className="text-lg md:text-xl opacity-95">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-bold mb-4"
+          >
+            Contact <span className="text-blue-500">TCCL</span>
+          </motion.h1>
+          <p className="text-lg md:text-xl text-gray-400">
             Book a new connection or get support from our team
           </p>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="pt-20 pb-12 px-6 bg-gray-50">
+      <section className="pt-20 pb-12 px-6 bg-black">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-start">
           {/* LEFT INFO */}
           <motion.div
@@ -97,36 +101,36 @@ ${form.message}
           >
             <h2 className="text-3xl font-bold">Reach Us</h2>
 
-            <div className="bg-white p-5 rounded-xl shadow flex gap-4">
-              <MapPin className="text-[#1a89e5]" />
+            <div className="bg-gray-900 p-5 rounded-xl border border-white/10 flex gap-4">
+              <MapPin className="text-blue-500" />
               <div>
-                <div className="font-semibold">Office Address</div>
-                <div className="text-sm text-gray-600">{address}</div>
+                <div className="font-semibold text-white">Office Address</div>
+                <div className="text-sm text-gray-400">{address}</div>
               </div>
             </div>
 
-            <div className="bg-white p-5 rounded-xl shadow flex gap-4">
-              <Mail className="text-[#1a89e5]" />
+            <div className="bg-gray-900 p-5 rounded-xl border border-white/10 flex gap-4">
+              <Mail className="text-blue-500" />
               <div>
-                <div className="font-semibold">Email</div>
+                <div className="font-semibold text-white">Email</div>
                 <a
                   href={`mailto:${email}`}
-                  className="text-sm text-[#1a89e5] hover:underline"
+                  className="text-sm text-blue-500 hover:text-blue-400"
                 >
                   {email}
                 </a>
               </div>
             </div>
 
-            <div className="bg-white p-5 rounded-xl shadow flex gap-4">
-              <Phone className="text-[#1a89e5]" />
+            <div className="bg-gray-900 p-5 rounded-xl border border-white/10 flex gap-4">
+              <Phone className="text-blue-500" />
               <div>
-                <div className="font-semibold">Phone</div>
+                <div className="font-semibold text-white">Phone</div>
                 {phones.map((p) => (
                   <a
                     key={p}
                     href={`tel:${p.replace(/[^0-9]/g, "")}`}
-                    className="block text-sm text-[#1a89e5] hover:underline"
+                    className="block text-sm text-blue-500 hover:text-blue-400"
                   >
                     {p}
                   </a>
@@ -134,23 +138,23 @@ ${form.message}
               </div>
             </div>
 
-            <div className="bg-white p-5 rounded-xl shadow flex gap-4">
-              <Clock className="text-[#1a89e5]" />
+            <div className="bg-gray-900 p-5 rounded-xl border border-white/10 flex gap-4">
+              <Clock className="text-blue-500" />
               <div>
-                <div className="font-semibold">Office Hours</div>
-                <div className="text-sm text-gray-600">
+                <div className="font-semibold text-white">Office Hours</div>
+                <div className="text-sm text-gray-400">
                   Mon – Sat, 9:00 AM – 6:00 PM
                 </div>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow overflow-hidden h-64">
+            <div className="bg-gray-900 rounded-xl border border-white/10 overflow-hidden h-64 shadow-2xl">
               <iframe
                 title="TCCL Location"
                 src={`https://www.google.com/maps?q=${encodeURIComponent(
                   address
                 )}&output=embed`}
-                className="w-full h-full border-0"
+                className="w-full h-full border-0 grayscale opacity-80"
                 loading="lazy"
               />
             </div>
@@ -161,9 +165,9 @@ ${form.message}
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-2xl shadow-xl p-6"
+            className="bg-gray-900 rounded-2xl shadow-2xl p-8 border border-white/10"
           >
-            <h3 className="text-2xl font-bold text-[#1a89e5] mb-6">
+            <h3 className="text-2xl font-bold text-blue-500 mb-6 font-display">
               Book Your Connection
             </h3>
 
@@ -172,13 +176,13 @@ ${form.message}
                 <div key={field}>
                   <input
                     name={field}
-                    placeholder={`Your ${field}`}
+                    placeholder={`Your ${field.charAt(0).toUpperCase() + field.slice(1)}`}
                     value={form[field]}
                     onChange={handleChange}
-                    className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1a89e5]"
+                    className="w-full bg-black rounded-lg border border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-display"
                   />
                   {errors[field] && (
-                    <p className="text-sm text-red-600 mt-1">
+                    <p className="text-sm text-red-500 mt-1">
                       {errors[field]}
                     </p>
                   )}
@@ -187,16 +191,16 @@ ${form.message}
 
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder="How can we help you?"
                 rows={4}
                 value={form.message}
                 onChange={handleChange}
-                className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#1a89e5]"
+                className="w-full bg-black rounded-lg border border-white/10 px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all font-display"
               />
 
               <button
                 type="submit"
-                className="w-full bg-[#1a89e5] text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 hover:scale-[1.02] transition"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-blue-500/30 transition-all active:scale-[0.98]"
               >
                 <Send size={18} />
                 {status === "sending" ? "Sending..." : "Send Request"}

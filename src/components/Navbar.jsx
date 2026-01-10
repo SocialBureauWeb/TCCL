@@ -1,7 +1,5 @@
-import { title } from 'framer-motion/client'
 import React, { useState, useRef, useEffect } from 'react'
 import { FaUser } from 'react-icons/fa'
-import { href } from 'react-router-dom'
 
 export const Navbar = ({ logo = '/assets/logo.png' }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -24,34 +22,37 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
   const menu = [
     { title: 'Home', href: '/' },
     { title: 'About Us', href: '/about' },
-    { title: 'Regulatory', items: [
+    {
+      title: 'Regulatory', items: [
         { title: 'TCCL RIO', href: '/assets/pdf1.pdf' },
         { title: 'Declaration Under Section 4(4)', href: '/declaration' },
       ],
     },
-    { title: 'Consumer Corner', items: [
+    {
+      title: 'Consumer Corner', items: [
         { title: 'Channels and Packages', href: '/channelPackage' },
         { title: 'Network Capacity Fee', href: '/network' },
         { title: 'CPE Scheme', href: '/cpeScheme' },
         { title: 'Manual of Practice', href: '/assets/pdf2.pdf' }
       ],
     },
-    { title: 'Subscriber Corner', items: [
+    {
+      title: 'Subscriber Corner', items: [
         { title: 'Subscriber Login', href: 'https://customer.tccl.co.in/' },
         { title: 'CAF FORM', href: '/assets/pdf3.pdf' },
       ],
     },
-    {title: 'Contact Us', href:'/contact'},
+    { title: 'Contact Us', href: '/contact' },
   ]
 
   return (
-    <nav ref={wrapperRef} className="relative z-50 bg-gradient-to-r from-blue-600 to-blue-800 text-black shadow-lg">
+    <nav ref={wrapperRef} className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-lg text-white shadow-lg border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Hamburger Menu */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-md text-blaack hover:bg-blue/10"
+            className="md:hidden p-2 rounded-md text-white hover:bg-white/10"
             aria-label="Toggle menu"
           >
             ☰
@@ -68,45 +69,45 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
               <div key={m.title} className="relative group">
                 {m.items ? (
                   <>
-<div key={m.title} className="relative group">
-  {m.items ? (
-    <>
-      {/* Menu title */}
-      <span className="flex items-center gap-2 px-2 py-1 cursor-pointer hover:opacity-90">
-        {m.title}
-      </span>
+                    <div key={m.title} className="relative group">
+                      {m.items ? (
+                        <>
+                          {/* Menu title */}
+                          <span className="flex items-center gap-2 px-2 py-1 cursor-pointer hover:opacity-90">
+                            {m.title}
+                          </span>
 
-      {/* Dropdown on hover */}
-      <div
-        className="
-          absolute left-0 mt-2 w-48 bg-white text-gray-800
+                          {/* Dropdown on hover */}
+                          <div
+                            className="
+          absolute left-0 mt-2 w-48 bg-gray-800 text-white border border-gray-700
           rounded-md shadow-xl z-50
           opacity-0 invisible
           group-hover:opacity-100 group-hover:visible
           transition-all duration-200
         "
-      >
-        {m.items.map((it) => (
-          <a
-            key={it.title}
-            href={it.href}
-            className="block px-4 py-2 hover:bg-blue-100 first:rounded-t-md last:rounded-b-md"
-          >
-            {it.title}
-          </a>
-        ))}
-      </div>
-    </>
-  ) : (
-    <a href={m.href} className="hover:opacity-90">
-      {m.title}
-    </a>
-  )}
-</div>
+                          >
+                            {m.items.map((it) => (
+                              <a
+                                key={it.title}
+                                href={it.href}
+                                className="block px-4 py-2 hover:bg-gray-700 first:rounded-t-md last:rounded-b-md"
+                              >
+                                {it.title}
+                              </a>
+                            ))}
+                          </div>
+                        </>
+                      ) : (
+                        <a href={m.href} className="hover:opacity-90">
+                          {m.title}
+                        </a>
+                      )}
+                    </div>
 
                   </>
                 ) : (
-                  <a href={m.href} className="hover:opacity-90">
+                  <a href={m.href} className="hover:text-blue-500 transition-colors">
                     {m.title}
                   </a>
                 )}
@@ -186,69 +187,69 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
             </div> */}
 
             <div className="relative hidden md:block">
-  <button
-    onClick={() => setOperatorOpen(!operatorOpen)}
-    className="inline-flex items-center gap-2 bg-white text-blue-600 px-4 py-1 rounded-full font-medium shadow-sm hover:brightness-95"
-    aria-expanded={operatorOpen}
-    aria-haspopup="menu"
-  >
-    <FaUser size={16} />
-    Operator Login
-  </button>
+              <button
+                onClick={() => setOperatorOpen(!operatorOpen)}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-1 rounded-full font-medium shadow-sm hover:shadow-lg hover:shadow-blue-500/50 transition-all"
+                aria-expanded={operatorOpen}
+                aria-haspopup="menu"
+              >
+                <FaUser size={16} />
+                Operator Login
+              </button>
 
-  {operatorOpen && (
-    <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
-      <a
-        href="https://sms.tccl.co.in/index.php/lco_portal"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block px-4 py-2 hover:bg-blue-100 rounded-t-md"
-      >
-        Tamil Nadu
-      </a>
-      <a
-        href="https://sms.kclnetworks.com/index.php/lco_portal"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block px-4 py-2 hover:bg-blue-100 rounded-b-md"
-      >
-        Karnataka
-      </a>
-    </div>
-  )}
-</div>
+              {operatorOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-gray-800 text-white border border-gray-700 rounded-md shadow-xl z-50">
+                  <a
+                    href="https://sms.tccl.co.in/index.php/lco_portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 hover:bg-gray-700 rounded-t-md"
+                  >
+                    Tamil Nadu
+                  </a>
+                  <a
+                    href="https://sms.kclnetworks.com/index.php/lco_portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 hover:bg-gray-700 rounded-b-md"
+                  >
+                    Karnataka
+                  </a>
+                </div>
+              )}
+            </div>
 
-{/* Mobile operator button - ONLY ONE */}
-<div className="relative md:hidden">
-  <button
-    onClick={() => setOperatorOpen(!operatorOpen)}
-    className="p-2 text-black hover:bg-white/10 rounded-lg"
-    aria-label="Operator"
-  >
-    <FaUser size={20} />
-  </button>
+            {/* Mobile operator button - ONLY ONE */}
+            <div className="relative md:hidden">
+              <button
+                onClick={() => setOperatorOpen(!operatorOpen)}
+                className="p-2 text-white hover:bg-white/10 rounded-lg"
+                aria-label="Operator"
+              >
+                <FaUser size={20} />
+              </button>
 
-  {operatorOpen && (
-    <div className="absolute right-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-xl z-50">
-      <a
-        href="https://sms.tccl.co.in/index.php/lco_portal"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block px-4 py-2 hover:bg-blue-100 rounded-t-md"
-      >
-        Tamil Nadu
-      </a>
-      <a
-        href="https://sms.kclnetworks.com/index.php/lco_portal"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block px-4 py-2 hover:bg-blue-100 rounded-b-md"
-      >
-        Karnataka
-      </a>
-    </div>
-  )}
-</div>
+              {operatorOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-gray-800 text-white border border-gray-700 rounded-md shadow-xl z-50">
+                  <a
+                    href="https://sms.tccl.co.in/index.php/lco_portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 hover:bg-gray-700 rounded-t-md"
+                  >
+                    Tamil Nadu
+                  </a>
+                  <a
+                    href="https://sms.kclnetworks.com/index.php/lco_portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 hover:bg-gray-700 rounded-b-md"
+                  >
+                    Karnataka
+                  </a>
+                </div>
+              )}
+            </div>
 
           </div>
         </div>
@@ -262,17 +263,17 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
                   <>
                     <button
                       onClick={() => setOpenDropdown(openDropdown === m.title ? null : m.title)}
-                      className="w-full text-left px-4 py-2 hover:bg-white/10"
+                      className="w-full text-left px-4 py-2 hover:bg-gray-800"
                     >
                       {m.title}
                     </button>
                     {openDropdown === m.title && (
-                      <div className="bg-white/10 z-50">
+                      <div className="bg-gray-800 z-50">
                         {m.items.map((it) => (
                           <a
                             key={it.title}
                             href={it.href}
-                            className="block pl-8 pr-4 py-2 hover:bg-white/20"
+                            className="block pl-8 pr-4 py-2 hover:bg-gray-700"
                           >
                             {it.title}
                           </a>
@@ -281,7 +282,7 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
                     )}
                   </>
                 ) : (
-                  <a href={m.href} className="block px-4 py-2 hover:bg-white/10">
+                  <a href={m.href} className="block px-4 py-2 hover:bg-gray-800">
                     {m.title}
                   </a>
                 )}
@@ -289,7 +290,7 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
             ))}
             <button
               onClick={() => setMobileOpen(false)}
-              className="w-full text-left px-4 py-2 hover:bg-white/10 mt-2 border-t border-white/20"
+              className="w-full text-left px-4 py-2 hover:bg-gray-800 mt-2 border-t border-gray-700"
               aria-haspopup="menu"
             >
               Operator Login

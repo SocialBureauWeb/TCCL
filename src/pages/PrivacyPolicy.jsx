@@ -4,9 +4,9 @@ import { Navbar } from "../components/Navbar";
 import ContactSection from "../components/ContactSection";
 
 const Section = ({ title, children }) => (
-  <div className="bg-white rounded-xl shadow p-6 space-y-3">
-    <h3 className="text-xl font-bold text-[#1a89e5]">{title}</h3>
-    <div className="text-gray-700 text-sm leading-relaxed space-y-2">
+  <div className="bg-gray-900 rounded-xl border border-white/10 p-6 space-y-3 shadow-2xl">
+    <h3 className="text-xl font-bold text-blue-500">{title}</h3>
+    <div className="text-gray-400 text-sm leading-relaxed space-y-2">
       {children}
     </div>
   </div>
@@ -14,20 +14,24 @@ const Section = ({ title, children }) => (
 
 export const Privacy = () => {
   return (
-    <div className="font-sans bg-white text-gray-800">
+    <div className="font-sans bg-black text-white">
       <Navbar />
 
       {/* HERO */}
-      <section className="bg-gradient-to-br from-[#1a89e5] via-[#0083edff] to-blue-900 text-white pt-28 pb-24 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Privacy Policy
-          </h1>
+      <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white pt-28 pb-24 px-6 border-b border-white/10 text-center">
+        <div className="max-w-4xl mx-auto">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-4xl md:text-6xl font-bold mb-4"
+          >
+            Privacy <span className="text-blue-500">Policy</span>
+          </motion.h1>
         </div>
       </section>
 
       {/* CONTENT */}
-      <section className="pt-20 pb-20 px-6 bg-gray-50">
+      <section className="pt-20 pb-20 px-6 bg-black">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +39,7 @@ export const Privacy = () => {
           className="max-w-5xl mx-auto space-y-6"
         >
           {/* INTRO */}
-          <div className="bg-white rounded-xl shadow p-6 text-sm text-gray-700 leading-relaxed">
+          <div className="bg-gray-900 border border-white/10 rounded-xl shadow p-8 text-sm text-gray-400 leading-relaxed">
             <p>
               This Privacy Policy describes how <strong>TCCL</strong> collects,
               uses, stores, and discloses Your information when You use our

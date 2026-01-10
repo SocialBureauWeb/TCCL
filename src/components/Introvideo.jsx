@@ -1,4 +1,3 @@
-import { video } from 'framer-motion/m'
 import React, { useState, useEffect, useRef } from 'react'
 import { href } from 'react-router-dom'
 
@@ -11,7 +10,7 @@ export const Introvideo = () => {
   const maxScale = 1
   const shrinkScrollAmount = 200 // Total scroll needed to fully shrink
 
-const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
+  const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
 
 
   const videoRef = useRef(null)
@@ -30,7 +29,7 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
           const newScale = Math.max(
             minScale,
             maxScale -
-              (scrollAccumulator.current / shrinkScrollAmount) * (maxScale - minScale)
+            (scrollAccumulator.current / shrinkScrollAmount) * (maxScale - minScale)
           )
           setScale(newScale)
 
@@ -60,7 +59,7 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
           const newScale = Math.min(
             maxScale,
             minScale +
-              (expandAccumulator.current / shrinkScrollAmount) * (maxScale - minScale)
+            (expandAccumulator.current / shrinkScrollAmount) * (maxScale - minScale)
           )
           setScale(newScale)
 
@@ -83,7 +82,7 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
       try {
         videoRef.current.load()
         const p = videoRef.current.play()
-        if (p && typeof p.then === 'function') p.catch(() => {})
+        if (p && typeof p.then === 'function') p.catch(() => { })
       } catch (err) {
         // ignore play errors
       }
@@ -133,7 +132,7 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
         return `https://www.youtube.com/embed/${id}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0`
       }
 
-      
+
     } catch (err) {
       // fallback: return original url
     }
@@ -145,30 +144,30 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
       img: 'https://yt3.googleusercontent.com/X2uO0_Bis8CH3IVH2Wa3HZTbR2ilArRjhzDTZQNn11oG9WdIqxFJ275CtF2hRZCmikWdHyv-qA=s900-c-k-c0x00ffffff-no-rj',
       video:
         'https://www.youtube.com/live/gynWNinqmjw?si=mtdjho3W6-DFrcTb'
-    },  
+    },
     {
       img:
         'https://yt3.ggpht.com/5MSHyRwoGwFhPgELh8VZ3FMQZ80EqxN2lcNJzK0YU10vETY1xskDhFy217YsZiO5ecgYfngakg=s176-c-k-c0x00ffffff-no-rj-mo',
       video:
         'https://www.youtube.com/live/vkXkV1y_oCI?si=3pOk6mTDJ7i1SyN2'
-    },  
-      {
+    },
+    {
       img:
         'https://image.winudf.com/v2/image1/Y29tLnRmQXBwLmFuZHJvaWQubmV3c3R2X2ljb25fMTU1NTI0NjM2Ml8wNDA/icon.png?w=312&fakeurl=1',
       video:
         'https://www.youtube.com/live/1wECsnGZcfc?si=b516CLTUfYQajkNw'
-    },  
+    },
     {
       img: 'https://upload.wikimedia.org/wikipedia/en/6/68/Colors_Tamil.png',
       video:
         'https://youtu.be/xVXUVaUMXuw?si=ODfngEjbtk-8GcSI'
-    },  
+    },
     {
       img:
         'https://yt3.googleusercontent.com/ytc/AIdro_kk-NcbgXCq8mmf24xhP-cqikuurxBug95MXiq-Y4nCRvs=s900-c-k-c0x00ffffff-no-rj',
       video:
         'https://youtu.be/s5LOQTaIfpU?si=NdayJalPZvjQ-bC9'
-    },  
+    },
     // {
     //   img: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Reporter_TV_2023.jpg',
     //   video:
@@ -178,23 +177,23 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
       img: 'https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/256x256/35d117224897cd2336250506aab01b38',
       video:
         'https://youtu.be/ofrmNK_iZ4Q?si=5mu9V7JTwhIv8ylc'
-    },  
+    },
     {
       img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzLN4v5So8JPR6ubG3CCkuHZggf6k-mXzp_Jida-HyyTZ6H5Z_',
       video:
         'https://www.youtube.com/live/sSalaw2Rt4I?si=U9B27qgQNhkhGBeg'
-    },  
+    },
     {
       img:
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSigfFZpZNOncGxbAW1GQg7bnWBqUeBUnCIOZmoPd1nF44ZEYASjGIXqJunP7KQlqnjzQM&usqp=CAU',
       video:
         'https://youtu.be/LCatM2mrL6s?si=ZoDLFqq9NP6iLUbf'
-    },  
+    },
     {
       img: 'https://classicdth.com/wp-content/uploads/2024/01/zee-tamil.png',
       video:
         'https://youtu.be/xW19yEfLl2A?si=_YcNEv4dGTMaRbA8'
-    }, 
+    },
   ]
 
   // For an infinite seamless scroll we render the thumbnails twice
@@ -291,9 +290,9 @@ const [videoSrc, setVideoSrc] = useState("/assets/cover.mp4");
   //     </div>
   //   )
   // }
-if (isMobile) {
-  return null  // Returns absolutely nothing - zero space
-}
+  if (isMobile) {
+    return null  // Returns absolutely nothing - zero space
+  }
   return (
     <>
       <div style={{ width: '100%', display: 'flex', justifyContent: 'center', maxHeight: '108vh' }}>
@@ -404,23 +403,23 @@ if (isMobile) {
               })}
 
               {/* setupbox image directly after thumbnails in the same row */}
-              
+
             </div>
-            
+
           )}
-          
+
         </div>
-        
+
       </div>
-{!isMobile && (
-  <div style={{ textAlign: 'center' }}>
-    <img
-      src="https://res.cloudinary.com/dtwcgfmar/image/upload/v1764741385/Modem_clzqrz.png"
-      alt="setupbox"
-      style={{ width: '80%', height: 'auto', display: 'inline-block' }}
-    />
-  </div>
-)}
+      {!isMobile && (
+        <div style={{ textAlign: 'center' }}>
+          <img
+            src="https://res.cloudinary.com/dtwcgfmar/image/upload/v1764741385/Modem_clzqrz.png"
+            alt="setupbox"
+            style={{ width: '80%', height: 'auto', display: 'inline-block' }}
+          />
+        </div>
+      )}
 
       {/* popup image shown at bottom center for 1s when a thumbnail is clicked */}
       <div

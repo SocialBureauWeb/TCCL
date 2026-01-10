@@ -57,8 +57,8 @@ export const AboutPage = () => {
     { number: "3M+", label: "Happy Households", icon: Users, color: "from-blue-500 to-blue-600" },
     { number: "500+", label: "TV Channels", icon: TvIcon, color: "from-green-500 to-green-600" },
     { number: "8500+", label: "KM Fiber Network", icon: Cable, color: "from-purple-500 to-purple-600" },
-    { number: "8000+", label: "Operator Partners", icon: Users, color: "from-orange-500 to-orange-600" },
-    { number: "24/7", label: "Customer Support", icon: Headphones, color: "from-red-500 to-red-600" },
+    { number: "8000+", label: "Operator Partners", icon: Users, color: "from-blue-500 to-blue-600" },
+    { number: "24/7", label: "Customer Support", icon: Headphones, color: "from-blue-500 to-blue-600" },
     { number: "99.9%", label: "Service Uptime", icon: ShieldCheck, color: "from-teal-500 to-teal-600" },
   ];
 
@@ -104,7 +104,7 @@ export const AboutPage = () => {
   };
 
   return (
-    <div className="font-sans bg-white text-gray-800 overflow-hidden">
+    <div className="font-sans bg-black text-white overflow-hidden">
       <Navbar />
 
       {/* ENHANCED HERO SECTION */}
@@ -116,7 +116,7 @@ export const AboutPage = () => {
             alt="Hero Background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/85 to-blue-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/95"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
@@ -160,7 +160,7 @@ export const AboutPage = () => {
                 variants={line}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-2 text-white leading-tight"
               >
-                Powering <span className="text-yellow-300">Digital</span> Dreams,
+                Powering <span className="text-blue-500">Digital</span> Dreams,
               </motion.h1>
 
               {/* Heading line 2 */}
@@ -168,7 +168,7 @@ export const AboutPage = () => {
                 variants={line}
                 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight"
               >
-                Connecting <span className="text-yellow-300">Millions</span>
+                Connecting <span className="text-blue-500">Millions</span>
               </motion.h1>
 
               {/* Paragraph */}
@@ -255,7 +255,7 @@ export const AboutPage = () => {
       </section>
 
       {/* OUR STORY SECTION */}
-      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <motion.div
@@ -263,11 +263,11 @@ export const AboutPage = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Our Journey & Impact
               </h2>
-              <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-8 rounded-full"></div>
-              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto mb-8 rounded-full"></div>
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
                 From a visionary start-up to Tamil Nadu's leading Multi System Operator
               </p>
             </motion.div>
@@ -337,16 +337,16 @@ export const AboutPage = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="space-y-6">
-                <h3 className="text-3xl font-bold mb-6 text-gray-900">
+                <h3 className="text-3xl font-bold mb-6 text-white">
                   Leading Digital Transformation
                 </h3>
 
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Established in 2012, <strong className="text-blue-600">Thamizhaga Cable TV Communication Ltd</strong> has revolutionized the cable television landscape in Tamil Nadu. From humble beginnings to becoming the state's preferred MSO, our journey is a testament to innovation, quality, and customer-centric approach.
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Established in 2012, <strong className="text-blue-500">Thamizhaga Cable TV Communication Ltd</strong> has revolutionized the cable television landscape in Tamil Nadu. From humble beginnings to becoming the state's preferred MSO, our journey is a testament to innovation, quality, and customer-centric approach.
                 </p>
 
-                <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
-                  <p className="text-gray-700 text-lg">
+                <div className="bg-white/5 border-l-4 border-blue-500 p-6 rounded-r-lg border border-white/10">
+                  <p className="text-gray-300 text-lg">
                     With over <strong>8500+ KM of fiber-optic network</strong> and <strong>cutting-edge digital infrastructure</strong>, we deliver unparalleled entertainment experiences to every home.
                   </p>
                 </div>
@@ -359,8 +359,8 @@ export const AboutPage = () => {
                     "Pioneer in HD and digital content delivery"
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-lg">{item}</span>
+                      <CheckCircle className="h-6 w-6 text-blue-500 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300 text-lg">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -369,8 +369,8 @@ export const AboutPage = () => {
           </div>
 
           {/* ACHIEVEMENTS TIMELINE */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-3xl font-bold mb-10 text-center text-gray-900">Milestone Journey</h3>
+          <div className="bg-gray-900 rounded-2xl shadow-xl p-8 border border-white/10">
+            <h3 className="text-3xl font-bold mb-10 text-center text-white">Milestone Journey</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {achievements.map((achievement, idx) => {
                 const Icon = achievement.icon;
@@ -385,20 +385,18 @@ export const AboutPage = () => {
                   >
                     <div className="relative flex justify-center">
                       {/* Main Icon Circle */}
-                      <div className={`relative w-20 h-10 rounded-2xl bg-gradient-to-br ${idx % 2 === 0 ? 'from-blue-500 to-blue-600' : 'from-blue-600 to-blue-700'} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`relative w-24 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <Icon className="h-10 w-10 text-white" />
 
                         {/* Year Badge - Perfectly Centered at Top */}
-                        {/* <div className="absolute -top-3 inset-x-0 mx-auto w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center text-blue-900 font-bold text-sm shadow-md border-2 border-white"> */}
-                        {/* <div className="absolute -top-4 inset-x-0 mx-auto min-w-[3rem] h-12 p-2 bg-yellow-400 rounded-full flex items-center justify-center text-blue-900 font-bold text-base shadow-md border-2 border-white"> */}
-                        <div className="absolute -top-5 inset-x-0 mx-auto w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center text-blue-900 font-bold text-lg shadow-md border-2 border-white">
+                        <div className="absolute -top-5 inset-x-0 mx-auto w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center text-blue-500 font-bold text-lg shadow-md border-2 border-white/10">
 
                           {achievement.year}
                         </div>
                       </div>
                     </div>
-                    <h4 className="font-bold text-gray-900 mb-2">{achievement.title}</h4>
-                    <p className="text-gray-600 text-sm">{achievement.desc}</p>
+                    <h4 className="font-bold text-white mb-2">{achievement.title}</h4>
+                    <p className="text-gray-400 text-sm">{achievement.desc}</p>
                   </motion.div>
                 );
               })}
@@ -408,11 +406,11 @@ export const AboutPage = () => {
       </section>
 
       {/* TECHNOLOGY EXCELLENCE */}
-      <section className="px-6 bg-gradient-to-b from-white to-blue-50 py-12">
+      <section className="px-6 bg-gradient-to-b from-gray-950 to-black py-12 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Technology Leadership</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-base md:text-lg">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Technology Leadership</h2>
+            <p className="text-gray-400 max-w-3xl mx-auto text-base md:text-lg">
               Advanced infrastructure powering seamless digital experiences
             </p>
           </div>
@@ -465,11 +463,11 @@ export const AboutPage = () => {
         </div>
       </section>
       {/* SERVICES SHOWCASE */}
-      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 px-6 bg-gradient-to-b from-black to-gray-900 border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Our Premium Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            <h2 className="text-4xl font-bold mb-4 text-white">Our Premium Services</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
               Comprehensive digital solutions for modern entertainment needs
             </p>
           </div>
@@ -484,7 +482,7 @@ export const AboutPage = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+                  className="group bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-white/10"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -492,15 +490,15 @@ export const AboutPage = () => {
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute top-4 right-4 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <div className="absolute top-4 right-4 w-12 h-12 bg-blue-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/10">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>
-                    <p className="text-gray-600 mb-6">{service.desc}</p>
-                    <div className="flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all cursor-pointer">
+                    <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                    <p className="text-gray-400 mb-6">{service.desc}</p>
+                    <div className="flex items-center gap-2 text-blue-500 font-semibold hover:gap-3 transition-all cursor-pointer">
                       Discover More <ChevronRight className="h-4 w-4" />
                     </div>
                   </div>
@@ -619,16 +617,16 @@ export const AboutPage = () => {
         </div>
       </section>
       {/* TECH FEATURES */}
-      <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-gray-900">Technology Features</h3>
+      <div className="bg-gray-900 rounded-2xl shadow-lg p-6 md:p-8 border-t border-white/10">
+        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">Technology Features</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {technologyFeatures.map((tech, idx) => (
             <div key={idx} className="text-center group">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <tech.icon className="h-8 w-8 md:h-10 md:w-10 text-blue-600" />
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-white/5 to-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-105 transition-transform duration-300 border border-white/10">
+                <tech.icon className="h-8 w-8 md:h-10 md:w-10 text-blue-500" />
               </div>
-              <div className="font-bold text-gray-900 text-base md:text-lg mb-2">{tech.title}</div>
-              <div className="text-gray-600 text-xs md:text-sm">{tech.desc}</div>
+              <div className="font-bold text-white text-base md:text-lg mb-2">{tech.title}</div>
+              <div className="text-gray-400 text-xs md:text-sm">{tech.desc}</div>
             </div>
           ))}
         </div>

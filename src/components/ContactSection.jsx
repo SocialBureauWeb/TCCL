@@ -1,97 +1,106 @@
+/*
+// SUPREME PINKISH VIOLET & TCCL BLUE - ULTRA ATTRACTIVE THEME
+// DESIGN: NEON-GRADIENT HYPER-DARK
+// STRUCTURE: REPLICATED FROM TCCL-SELF.VERCEL.APP (WITH DARK THEME)
+*/
+
+import React from 'react';
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import {
+    Facebook,
+    Twitter,
+    Instagram,
+    Youtube,
+    Mail,
+    Phone,
+    MapPin,
+    ChevronRight,
+    HeadphonesIcon,
+    ArrowRight,
+    Sparkles
+} from "lucide-react";
+import { motion } from 'framer-motion';
 
 export const ContactSection = () => {
-  return (
-    <>
-      <section className="bg-[#1187e6] text-white py-12">
-<div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    const currentYear = new Date().getFullYear();
 
-        {/* CONTACT DETAILS */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Contact Details</h3>
+    const footerLinks = [
+        { name: "About Us", path: "/about" },
+        { name: "Contact Us", path: "/contact" },
+        { name: "Terms & Conditions", path: "/terms" },
+        { name: "Privacy Policy", path: "/privacy" },
+    ];
 
-          <div className="flex items-start gap-3 mb-3 text-sm">
-            <MapPin className="w-5 h-5 mt-1 text-white/80" />
-            <p className="leading-relaxed text-white/90">
-              9A, 5, Club Rd, M.S. Nagar, Mukta Gardens,  
-              Chetpet, Chennai, Tamil Nadu – 600031
-            </p>
-          </div>
+    return (
+        <footer className="bg-[#030005] text-white overflow-hidden relative">
+            {/* 2. MAIN FOOTER GRID (3 COLUMNS) */}
+            <div className="max-w-7xl mx-auto px-6 py-24 border-y border-white/5 relative">
+                {/* Decorative Neon Auras */}
+                <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 blur-[100px] pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-96 h-96 bg-pink-600/5 blur-[100px] pointer-events-none" />
 
-          <div className="flex items-center gap-3 mb-3 text-sm">
-            <Mail className="w-5 h-5 text-white/80" />
-            <a
-              href="mailto:customercare@tccl.co.in"
-              className="hover:underline"
-            >
-              customercare@tccl.co.in
-            </a>
-          </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 relative z-10">
 
-          <div className="flex items-center gap-3 text-sm">
-            <Phone className="w-5 h-5 text-white/80" />
-            <span>044-4060-6666 | 1800-102-9845</span>
-          </div>
-        </div>
+                    {/* Column 1: Contact Details */}
+                    <div>
+                        <div className="space-y-8">
+                            <div className="flex gap-5 group">
+                                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-xl">
+                                    <MapPin size={22} />
+                                </div>
+                                <p className="text-gray-400 text-sm font-bold leading-relaxed uppercase tracking-wider group-hover:text-white transition-colors">
+                                    9A, 5, Club Rd, M.S. Nagar, Mukta Gardens, Chetpet, Chennai – 600031
+                                </p>
+                            </div>
+                            <div className="flex gap-5 group items-center">
+                                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-pink-500 group-hover:bg-pink-600 group-hover:text-white transition-all shadow-xl">
+                                    <Mail size={22} />
+                                </div>
+                                <a href="mailto:customercare@tccl.co.in" className="text-gray-400 font-black text-sm uppercase tracking-widest group-hover:text-pink-400 transition-colors">
+                                    customercare@tccl.co.in
+                                </a>
+                            </div>
+                            <div className="flex gap-5 group items-center">
+                                <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-xl">
+                                    <Phone size={22} />
+                                </div>
+                                <div className="flex flex-col">
+                                    <a href="tel:04440606666" className="text-gray-400 font-black text-sm uppercase tracking-widest group-hover:text-blue-400 transition-colors">044-4060-6666</a>
+                                    <a href="tel:18001029845" className="text-gray-400 font-black text-xs uppercase tracking-widest mt-1 opacity-50">1800-102-9845</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        {/* QUICK LINKS */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <Link to="/about" className="hover:underline">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:underline">
-                Contact Us
-              </Link>
-            </li>
-                        <li>
-              <Link to="/terms" className="hover:underline">
-                Terms & Conditions
-              </Link>
-            </li>
-            <li>
-              <Link to="/privacy" className="hover:underline">
-                Privacy Policy
-              </Link>
-            </li>
-          </ul>
-        </div>
+                    {/* Column 2: Quick Links */}
+                    <div>
+                        <h4 className="text-white font-black text-[11px] uppercase tracking-[0.5em] mb-12 italic border-l-2 border-blue-600 pl-6">Navigation</h4>
+                        <ul className="grid grid-cols-1 gap-6">
+                            {footerLinks.map((link) => (
+                                <li key={link.name}>
+                                    <Link
+                                        to={link.path}
+                                        className="text-gray-500 hover:text-white font-black text-[13px] uppercase tracking-[0.3em] transition-all flex items-center gap-4 group"
+                                    >
+                                        <ChevronRight size={16} className="text-blue-500 opacity-0 group-hover:opacity-100 -ml-4 group-hover:ml-0 transition-all font-bold" />
+                                        {link.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-        {/* CTA / SUPPORT */}
-        <div className="flex flex-col justify-between">
-          <h3 className="text-xl font-semibold mb-4">Need Help?</h3>
-          <p className="text-sm text-white/90 mb-4">
-            Our support team is available to assist you with any service or billing
-            related queries.
-          </p>
+                </div>
+                <br />
+                <img
+                    src="/assets/footer.jpg"
+                    alt="footer-img"
+                    className="h-16 transition-transform group-hover:scale-105"
+                />
+            </div>
 
-          <Link
-            to="/contact"
-            className="inline-block bg-white text-[#1187e6] font-semibold px-5 py-2 rounded-lg w-fit hover:bg-gray-100 transition"
-          >
-            Get Support
-          </Link>
-        </div>
-
-
-      
-      </div>
-
-        <div className="max-w-6xl mx-auto px-6 pt-4">
-          <img
-            src="/assets/footer.jpg" // Change to your image path
-            alt="Contact us for premium services"
-            className="w-full h-auto max-h-[700px] object-contain rounded-lg"
-          />
-        </div>
-    </section>
-    </>
-  );
+        </footer>
+    );
 };
 
 export default ContactSection;

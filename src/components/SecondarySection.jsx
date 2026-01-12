@@ -56,9 +56,10 @@ export default function SecondarySection() {
                             A LEGACY OF <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-white to-pink-500">DIGITAL MASTERCLASS</span>
                         </h2>
-                        <p className="text-xl text-gray-500 max-w-2xl mx-auto mt-10 font-bold leading-relaxed border-t border-white/5 pt-10 uppercase tracking-widest text-center">
-                            Elevating South India's digital landscape since 2008.
+                        <p className="text-xl text-gray-500 mx-auto mt-10 font-bold border-t border-white/5 pt-10 uppercase tracking-widest text-center whitespace-nowrap">
+                            Elevating South India's digital landscape since 2008
                         </p>
+
                     </motion.div>
                 </div>
 

@@ -90,7 +90,7 @@ export default function HeroBanner() {
                         </div>
 
                         {/* PREMIUM BADGES */}
-                        <div className="flex gap-16 mt-20 pt-12 border-t border-white/10">
+                        <div className="flex justify-center gap-16 mt-20 pt-12 border-t border-white/10">
                             {[
                                 { count: '3M+', label: 'CONNECTED', icon: Zap, color: 'blue' },
                                 { count: '500+', label: 'COMMAND', icon: Tv, color: 'pink' },

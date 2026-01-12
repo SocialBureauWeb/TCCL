@@ -40,7 +40,7 @@ export const Home = () => {
 
       <Navbar />
 
-      <main className="relative pt-20">
+      <main className="relative">
 
         {/* GLOBAL DYNAMIC ATMOSPHERE: PULSATING NEON LAYERS */}
         <div className="fixed inset-0 pointer-events-none z-0">

@@ -10,26 +10,26 @@ import { Shield, Zap, Activity, Lock, Cpu } from 'lucide-react';
 const valueProps = [
     {
         icon: Shield,
-        title: 'ARMORED SIGNAL',
-        desc: 'Sovereign signal protocols ensuring absolute digital stability for elite viewing.',
+        title: 'DIGITAL INFRASTRUCTURE',
+        desc: 'Powered by an 8500 KM fiber optic backbone',
         gradient: 'from-[#1a89e5] to-blue-700'
     },
     {
         icon: Zap,
-        title: 'HYPER-LATENCY',
-        desc: 'Zero-hop signal routing for the fastest command response in the industry.',
+        title: 'SIGNAL QUALITY',
+        desc: 'Providing high-quality digital picture and sound',
         gradient: 'from-pink-500 to-fuchsia-600'
     },
     {
         icon: Cpu,
-        title: 'NEXUS COMMAND',
-        desc: 'State-wide D-Centers monitoring network integrity with AI-driven precision.',
+        title: 'NETWORK OPERATIONS',
+        desc: 'Managed through centralized digital head-end facilities',
         gradient: 'from-blue-600 to-[#1a89e5]'
     },
     {
         icon: Activity,
-        title: 'LOCAL ARCHIVE',
-        desc: 'Deeply rooted support infrastructure. We are always where you are.',
+        title: 'REGIONAL SUPPORT',
+        desc: 'Service presence across Tamil Nadu, Andhra Pradesh, and Karnataka',
         gradient: 'from-blue-600 to-blue-800'
     }
 ];
@@ -49,45 +49,16 @@ export const OTTSection = () => {
                         transition={{ duration: 1 }}
                         className="lg:col-span-6 relative"
                     >
-                        <div className="relative group p-8 rounded-[4rem] bg-gradient-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-3xl shadow-[0_50px_100px_rgba(0,0,0,0.8)] overflow-hidden">
-                            <div className="relative rounded-[3rem] overflow-hidden aspect-[4/5] bg-black">
-                                <img
-                                    src="/assets/Landing page 5.jpg"
+                            <img 
+                               src="/assets/Landing page 5.jpg"
                                     alt=""
-                                    className="absolute inset-0 w-full h-full object-cover opacity-40 blur-3xl scale-110"
+                                    className="absolute inset-0 w-full h-full object-cover opacity-40 blur-3xl scale-110 rounded-3xl pointer-events-none"
                                 />
                                 <img
                                     src="/assets/Landing page 5.jpg"
                                     alt="Digital Infrastructure"
                                     className="relative w-full h-full object-contain brightness-150 saturate-150 transition-all duration-700 pointer-events-none"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#030005] via-transparent to-transparent opacity-80" />
-
-                                {/* HUD Overlay: Neon Matrix */}
-                                <div className="absolute inset-x-8 bottom-8 p-10 bg-[#030005]/80 backdrop-blur-3xl border border-white/10 rounded-[2.5rem] shadow-3xl">
-                                    <div className="flex justify-between items-center mb-6">
-                                        <div className="flex gap-2 h-10 items-end">
-                                            {[...Array(6)].map((_, i) => (
-                                                <motion.div
-                                                    key={i}
-                                                    animate={{ height: [`${30 + Math.random() * 50}%`, `${10 + Math.random() * 90}%`] }}
-                                                    transition={{ duration: 0.5 + Math.random(), repeat: Infinity, repeatType: "mirror" }}
-                                                    className="w-1.5 bg-[#1a89e5] rounded-full"
-                                                />
-                                            ))}
-                                        </div>
-                                        <div className="px-5 py-1.5 bg-[#1a89e5] text-white font-black text-[10px] uppercase tracking-widest rounded-full shadow-[0_0_20px_rgba(26,137,229,0.5)] animate-pulse">
-                                            CORE ACTIVE
-                                        </div>
-                                    </div>
-                                    <h4 className="text-2xl font-black text-white italic tracking-tighter uppercase mb-2">NEURAL BACKBONE</h4>
-                                    <p className="text-[10px] text-gray-500 font-extrabold uppercase tracking-[0.4em]">Grid Monitoring: TN-REGION-044</p>
-                                </div>
-                            </div>
-
-                            {/* Decorative Neon Border Flare - Blue Focus */}
-                            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/0 via-[#1a89e5]/30 to-blue-500/0 group-hover:via-[#1a89e5]/60 transition-all duration-700 pointer-events-none" />
-                        </div>
                     </motion.div>
 
                     {/* CONTENT SIDE */}

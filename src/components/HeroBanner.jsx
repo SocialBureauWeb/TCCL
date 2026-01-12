@@ -63,12 +63,12 @@ export default function HeroBanner() {
 
                         <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-10 tracking-tighter">
                             THE POWER OF <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-fuchsia-400 to-blue-600 drop-shadow-[0_0_15px_rgba(26,137,229,0.5)] uppercase">TCCL CONNECT.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-fuchsia-400 to-blue-600 drop-shadow-[0_0_15px_rgba(26,137,229,0.5)] uppercase">TCCL NETWORK</span>
                         </h1>
 
                         <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-xl font-semibold border-l-4 border-blue-600/50 pl-6 italic">
-                            Experience the fusion of Hyper-Fiber speeds and 4K Digital TV. High-performance networking redesigned for the future of entertainment.
-                        </p>
+                           Delivering high-quality digital cable television and broadband services
+through a state-wide fiber optic backbone across Tamil Nadu.                       </p>
 
                         <div className="flex flex-wrap gap-6">
                             <motion.a
@@ -113,7 +113,7 @@ export default function HeroBanner() {
                             { icon: Tv, title: 'Cable TV', gradient: 'from-[#1a89e5] to-blue-700' },
                             { icon: Wifi, title: 'Fiber Net', gradient: 'from-pink-500 to-fuchsia-600' },
                             { icon: ShieldCheck, title: 'Security', gradient: 'from-blue-600 to-[#1a89e5]' },
-                            { icon: Play, title: 'Direct', gradient: 'from-fuchsia-600 to-pink-500' },
+                            { icon: Play, title: 'HD', gradient: 'from-fuchsia-600 to-pink-500' },
                         ].map((item, idx) => (
                             <motion.div
                                 key={idx}

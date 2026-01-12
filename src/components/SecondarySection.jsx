@@ -5,28 +5,25 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Tv, Wifi, CheckCircle2, Zap, Shield, Layout, Star, Globe, ArrowRight } from 'lucide-react';
+import { Tv, Wifi, CheckCircle2, Zap, Shield, Layout, Star, Cable, Headphones, Signal } from 'lucide-react';
 
 const coreServices = [
     {
         title: "DIGITAL CABLE TV",
-        desc: "Unrivaled signal fidelity with 500+ channels and regional dominance.",
+        desc: "Providing over 500 digital channels with high-quality picture and sound",
         icon: Tv,
-        tag: "HYPER-HD",
         gradient: "from-[#1a89e5] to-blue-700"
     },
     {
-        title: "HYPER-FIBER NET",
-        desc: "Gigabit-grade symmetric speeds powered by undersea private fiber.",
+        title: "FIBER OPTIC NETWORK",
+        desc: "Broadband connectivity supported by an 8500 KM fiber optic network",
         icon: Wifi,
-        tag: "GIGA-GRID",
         gradient: "from-pink-500 to-fuchsia-600"
     },
     {
-        title: "ENTERPRISE PRO",
-        desc: "Custom infrastructure solutions for modern digital workspaces.",
+        title: "COMMERCIAL & INSTITUTIONAL SERVICES",
+        desc: "Digital cable and broadband connectivity solutions for offices and commercial establishments",
         icon: Layout,
-        tag: "NEXUSCORE",
         gradient: "from-blue-600 to-[#1a89e5]"
     }
 ];
@@ -57,7 +54,7 @@ export default function SecondarySection() {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-white to-pink-500">DIGITAL MASTERCLASS</span>
                         </h2>
                         <p className="text-xl text-gray-500 mx-auto mt-10 font-bold border-t border-white/5 pt-10 uppercase tracking-widest text-center whitespace-nowrap">
-                            Elevating South India's digital landscape since 2008
+                            Elevating South India's digital landscape since 2012
                         </p>
 
                     </motion.div>
@@ -73,7 +70,7 @@ export default function SecondarySection() {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.15, duration: 1 }}
                             whileHover={{ y: -20, scale: 1.02 }}
-                            className="group relative p-12 rounded-[4rem] bg-gradient-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-3xl hover:border-blue-500/40 transition-all duration-700 overflow-hidden"
+                            className="group relative p-8 rounded-[4rem] bg-gradient-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-3xl hover:border-blue-500/40 transition-all duration-700 overflow-hidden"
                         >
                             <div className="relative z-10">
                                 <div className={`w-20 h-20 rounded-[2rem] bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white mb-10 group-hover:rotate-12 transition-transform shadow-2xl`}>
@@ -81,9 +78,6 @@ export default function SecondarySection() {
                                 </div>
                                 <h3 className="text-2xl font-black text-white mb-6 tracking-tight group-hover:text-blue-400 transition-colors uppercase italic">{service.title}</h3>
                                 <p className="text-base text-gray-400 font-bold leading-relaxed mb-10 group-hover:text-gray-300 transition-colors">{service.desc}</p>
-                                <div className="flex items-center justify-between">
-                                    <span className="text-[10px] text-blue-400 font-black uppercase tracking-[0.3em] font-serif">{service.tag} VERIFIED</span>
-                                </div>
                             </div>
                         </motion.div>
                     ))}
@@ -103,7 +97,7 @@ export default function SecondarySection() {
                             className="relative group"
                         >
                             <div className="absolute inset-0 bg-blue-500/30 blur-[100px] rounded-full group-hover:bg-pink-500/30 transition-all duration-1000" />
-                            <div className="relative rounded-[4rem] overflow-hidden border border-white/10 shadow-3xl aspect-[4/3] transform group-hover:scale-105 transition-all duration-1000 bg-black">
+                            <div className="relative overflow-hidden border border-white/10 shadow-3xl aspect-[4/3] transform group-hover:scale-105 transition-all duration-1000 bg-black">
                                 <img
                                     src="/assets/tv4.jpeg"
                                     alt=""
@@ -132,10 +126,10 @@ export default function SecondarySection() {
 
                                 <div className="grid sm:grid-cols-2 gap-10">
                                     {[
-                                        { title: "ZERO LOSS NEXUS", icon: Shield, color: 'text-blue-400' },
-                                        { title: "ULTRA UHD MATRIX", icon: Globe, color: 'text-pink-400' },
-                                        { title: "LIFELINE 24/7", icon: Zap, color: 'text-blue-400' },
-                                        { title: "FIBER ARCHIVE", icon: CheckCircle2, color: 'text-pink-400' }
+                                        { title: "RELIABLE SIGNAL DELIVERY", icon: Signal, color: 'text-blue-400' },
+                                        { title: "HIGH-DEFINITION DIGITAL TRANSMISSION", icon: CheckCircle2, color: 'text-pink-400' },
+                                        { title: "CUSTOMER SUPPORT SERVICES", icon: Headphones, color: 'text-blue-400' },
+                                        { title: "EXTENSIVE FIBER OPTIC NETWORK", icon: Cable, color: 'text-pink-400' }
                                     ].map((item, i) => (
                                         <div key={i} className="flex items-center gap-5 group/item cursor-pointer">
                                             <div className={`w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center ${item.color} border border-white/10 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-pink-600 group-hover:text-white group-hover:shadow-[0_0_20px_rgba(26,137,229,0.3)] transition-all`}>

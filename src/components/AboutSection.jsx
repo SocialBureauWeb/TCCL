@@ -43,7 +43,7 @@ export const AboutSection = () => {
                         className="relative"
                     >
                         <p className="text-2xl text-gray-300 font-bold leading-relaxed italic border-l-4 border-blue-600 pl-10 select-none">
-                            "Thamizhaga Cable TV Communication Ltd (TCCL) is one of the largest Cable distribution companies with a strong emphasis on quality of service and content."
+                            Thamizhaga Cable TV Communication Ltd (TCCL) is one of the largest Cable distribution companies with a strong emphasis on quality of service and content
                         </p>
                     </motion.div>
                 </div>
@@ -60,14 +60,14 @@ export const AboutSection = () => {
                     >
                         <div className="prose prose-invert max-w-none">
                             <p className="text-lg text-gray-400 leading-relaxed font-semibold">
-                                This has enabled us to cater to millions of subscribers spread across Tamil Nadu in a very short span of time. With a fiber optic backbone across its networks and state-of-the-art distribution setups, we bring the digital age through Cable, transforming the way viewers receive information and entertainment.
+                                This has enabled us to cater to millions of subscribers spread across Tamil Nadu over the years. With a fiber optic backbone across its networks and state-of-the-art distribution setups, we bring the digital age through Cable, transforming the way viewers receive information and entertainment.
                             </p>
-                            <div className="h-px bg-white/5 my-10" />
-                            <p className="text-gray-400 leading-relaxed">
+                            <div className="h-px bg-white/5 my-10 prose prose-invert max-w-none" />
+                            <p className="text-lg text-gray-400 leading-relaxed font-semibold">
                                 Thamizhaga Cable TV Communication Pvt. Ltd. is a leading Multi System Operator (MSO) in Chennai. Started operations in December 2012, we aim to serve the entire state of Tamil Nadu with the best quality Cable Television experience.
                             </p>
-                            <p className="text-gray-400 leading-relaxed">
-                                TCCL's success can be attributed to the experience of the members of the **Tamil Nadu Cable TV Operators Welfare Association (TCOA)**, who are veterans in the field of cable TV technology. TCOA members are the pioneers who conceived the concept of MSO.
+                            <p className="text-lg text-gray-400 leading-relaxed font-semibold">
+                                TCCL's success can be attributed to the experience of the members of the Tamil Nadu Cable TV Operators Welfare Association (TCOA), who are veterans in the field of cable TV technology. TCOA members are the pioneers who conceived the concept of MSO.
                             </p>
                         </div>
 
@@ -154,8 +154,8 @@ export const AboutSection = () => {
                                 <span className="text-[#1a89e5]">HORIZON</span>
                             </h3>
                             <p className="text-lg text-gray-400 font-semibold leading-relaxed mb-12 italic border-l-2 border-pink-500 pl-8">
-                                TCCL is all set to provide its customers with a very cost-effective, technologically advanced STB, enabling access to a plethora of Value-Added Services like Video on Demand, Gaming, and E-commerce.
-                            </p>
+                                TCCL is planning to provide its customers with a cost-effective Set Top Box (STB),
+enabling access to Value-Added Services such as Video on Demand, Gaming, and E-commerce                            </p>
                             <div className="grid sm:grid-cols-2 gap-8">
                                 <div className="flex gap-4 items-center">
                                     <Award className="text-blue-500" size={24} />
@@ -163,7 +163,7 @@ export const AboutSection = () => {
                                 </div>
                                 <div className="flex gap-4 items-center">
                                     <Rocket className="text-pink-500" size={24} />
-                                    <span className="text-white font-black text-xs uppercase tracking-widest italic">Next-Gen Software</span>
+                                    <span className="text-white font-black text-xs uppercase tracking-widest italic">Support for Software Upgrades</span>
                                 </div>
                             </div>
                         </div>

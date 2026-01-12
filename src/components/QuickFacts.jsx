@@ -11,7 +11,7 @@ const stats = [
     { id: 1, icon: Users, label: "ELITE CONNECTIONS", value: 3000000, suffix: "+", color: "pink", gradient: "from-pink-500 to-fuchsia-600" },
     { id: 2, icon: Tv, label: "4K COMMAND HUB", value: 500, suffix: "+", color: "blue", gradient: "from-blue-600 to-cyan-500" },
     { id: 3, icon: Landmark, label: "D-CENTER NEXUS", value: 100, suffix: "+", color: "pink", gradient: "from-fuchsia-600 to-blue-600" },
-    { id: 4, icon: Truck, label: "FIELD STRATEGISTS", value: 2000, suffix: "+", color: "blue", gradient: "from-blue-600 to-indigo-700" },
+    { id: 4, icon: Truck, label: "DISTRIBUTORS", value: 2000, suffix: "+", color: "blue", gradient: "from-blue-600 to-indigo-700" },
 ];
 
 const Counter = ({ value, duration = 3000 }) => {

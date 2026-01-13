@@ -1,12 +1,30 @@
 import { motion } from "framer-motion";
 import {
-  Users, Target, Award, Briefcase, Tv, Wifi, MapPin, Globe,
-  BarChart, Shield, Clock, Heart, ChevronRight, Play, Star,
-  CheckCircle, TrendingUp, Zap, Globe as GlobeIcon,
-  Monitor, Smartphone, Server, Home, Video, ShoppingBag,
-  Headphones, ShieldCheck, Rocket, Building, Network, Award as AwardIcon,
-  ThumbsUp, Tv as TvIcon, Satellite, Smartphone as SmartphoneIcon,
-  TrendingUp as Growth, Database, Cable, Cctv
+  Users,
+  Target,
+  Award,
+  Tv,
+  Wifi,
+  Globe,
+  Shield,
+  Clock,
+  Heart,
+  ChevronRight,
+  Play,
+  CheckCircle,
+  Zap,
+  Headphones,
+  ShieldCheck,
+  Rocket,
+  Award as AwardIcon,
+  Tv as TvIcon,
+  Satellite,
+  Smartphone as SmartphoneIcon,
+  TrendingUp as Growth,
+  Database,
+  Cable,
+  Cctv,
+  Sparkles,
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import ContactSection from "../components/ContactSection";
@@ -35,19 +53,19 @@ export const AboutPage = () => {
   const services = [
     {
       title: "Digital Cable TV",
-      desc: "500+ channels with crystal clear HD quality and premium content",
+      desc: "500+ channels with high digital picture and sound quality, including HD content",
       icon: Tv,
       image: "/assets/tv34.jpg"
     },
     {
       title: "Broadband Services",
-      desc: "High-speed internet with fiber-optic technology for seamless connectivity",
+      desc: "Broadband internet delivered over fiber-optic technology for reliable connectivity",
       icon: Wifi,
       image: "/assets/highspeed.jpg"
     },
     {
       title: "Future Technology",
-      desc: "VoD, Smart Home, Gaming, and e-commerce integrations",
+      desc: "Planned value-added services including Video on Demand (VoD), Smart Home integrations, Gaming, and e-commerce",
       icon: Globe,
       image: "/assets/digit2.png"
     },
@@ -63,19 +81,19 @@ export const AboutPage = () => {
   ];
 
   const achievements = [
-    { year: "2012", title: "Foundation", desc: "Started operations in Chennai", icon: Building },
-    { year: "2014", title: "State Expansion", desc: "Expanded across Tamil Nadu", icon: MapPin },
-    { year: "2016", title: "1M Milestone", desc: "Reached 1 million subscribers", icon: AwardIcon },
-    { year: "2018", title: "Fiber Network", desc: "Launched 8500+ KM fiber optic", icon: Network },
-    { year: "2020", title: "Digital Excellence", desc: "Awarded for service quality", icon: Star },
+    { year: "2012", title: "Foundation", desc: "Started operations in Chennai" },
+    { year: "2014", title: "State Expansion", desc: "Expanded across Tamil Nadu" },
+    { year: "2016", title: "1M Milestone", desc: "Reached 1 million subscribers" },
+    { year: "2018", title: "Fiber Network", desc: "Launched 8500+ KM fiber optic" },
+    { year: "2020", title: "Digital Infrastructure", desc: "Advanced digital head-end and DAS implementation" },
     { year: "2023", title: "3M+ Homes", desc: "Serving 3 million households", icon: Growth },
   ];
 
   const technologyFeatures = [
-    { icon: Database, title: "Digital Headend", desc: "State-of-the-art processing" },
-    { icon: Satellite, title: "Signal Quality", desc: "Crystal clear transmission" },
-    { icon: SmartphoneIcon, title: "Multi-Platform", desc: "TV, Mobile & Web access" },
-    { icon: Cctv, title: "Secure Network", desc: "Protected content delivery" },
+    { icon: Database, title: "Digital Headend", desc: "State-of-the-art processing and distribution" },
+    { icon: Satellite, title: "Signal Quality", desc: "High-quality digital picture and sound" },
+    { icon: SmartphoneIcon, title: "Platform Readiness", desc: "Infrastructure designed to support future digital services" },
+    { icon: Cctv, title: "Secure Network", desc: "Content delivery supported by secure conditional access systems" },
   ];
   const container = {
     hidden: {},
@@ -108,151 +126,162 @@ export const AboutPage = () => {
       <Navbar />
 
       {/* ENHANCED HERO SECTION */}
-      <section className="relative min-h-[90vh] pt-24 pb-20 px-6 overflow-hidden">
-        {/* Background Image with Gradient Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={images.hero}
-            alt="Hero Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 to-black/95"></div>
-        </div>
+ <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#030005]">
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
-                <span className="text-white text-sm font-semibold">SINCE 2012 • LEADING MSO</span>
-              </div>
+            {/* HYPER-VIBRANT BACKGROUND */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/assets/Landing page 3.jpg"
+                    alt="Hero Background"
+                    className="w-full h-full object-cover opacity-40 mix-blend-overlay scale-110"
+                />
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-                Powering <span className="text-yellow-300">Digital</span> Dreams, <br />
-                Connecting <span className="text-yellow-300">Millions</span>
-              </h1>
+                {/* Layered Cinematic Overlays */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a0033] via-[#030005]/95 to-[#000a1a] z-10" />
 
-              <p className="text-xl md:text-2xl max-w-2xl mb-10 text-white/95 leading-relaxed">
-                Thamizhaga Cable TV Communication Ltd - Transforming entertainment experiences across Tamil Nadu with cutting-edge technology and unwavering commitment.
-              </p>
+                {/* Pulsating Neon Auras - TCCL Blue & Pinkish Violet */}
+                <motion.div
+                    animate={{
+                        opacity: [0.3, 0.6, 0.3],
+                        scale: [1, 1.2, 1],
+                    }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-[#d946ef]/20 rounded-full blur-[160px] z-10"
+                />
+                <motion.div
+                    animate={{
+                        opacity: [0.3, 0.6, 0.3],
+                        scale: [1.2, 1, 1.2],
+                    }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-[#1a89e5]/30 rounded-full blur-[160px] z-10"
+                />
+            </div>
 
-            </motion.div> */}
-            <motion.div
-              variants={container}
-              initial="hidden"
-              animate="show"
-            >
-              {/* Badge */}
-              <motion.div
-                variants={line}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6"
-              >
-                <span className="text-white text-sm font-semibold">
-                  SINCE 2012 • LEADING MSO
-                </span>
-              </motion.div>
+            <div className="relative z-20 max-w-7xl mx-auto px-6 py-24 w-full mt-10">
+                <div className="grid lg:grid-cols-12 gap-16 items-center">
 
-              {/* Heading line 1 */}
-              <motion.h1
-                variants={line}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-2 text-white leading-tight"
-              >
-                Powering <span className="text-blue-500">Digital</span> Dreams,
-              </motion.h1>
-
-              {/* Heading line 2 */}
-              <motion.h1
-                variants={line}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight"
-              >
-                Connecting <span className="text-blue-500">Millions</span>
-              </motion.h1>
-
-              {/* Paragraph */}
-              <motion.p
-                variants={line}
-                className="text-xl md:text-2xl max-w-2xl mb-10 text-white/95 leading-relaxed"
-              >
-                Thamizhaga Cable TV Communication Ltd – Transforming entertainment
-                experiences across Tamil Nadu with cutting-edge technology and
-                unwavering commitment.
-              </motion.p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <div className="grid grid-cols-2 gap-4">
-                  {/* {stats.slice(0, 4).map((stat, index) => {
-                    const Icon = stat.icon;
-                    return (
-                      <div
-                        key={index}
-                        className="bg-white/15 backdrop-blur-sm rounded-xl p-5 border border-white/20"
-                      >
-                        <div className="flex flex-col items-center text-center">
-                          <Icon className="h-8 w-8 text-white mb-3" />
-                          <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
-                          <div className="text-white font-medium text-sm">{stat.label}</div>
-                        </div>
-                      </div>
-                    );
-                  })} */}
-                  {stats.slice(0, 4).map((stat, index) => {
-                    const Icon = stat.icon;
-
-                    return (
-                      <motion.div
-                        key={index}
-                        whileHover={{ y: -6, scale: 1.04 }}
-                        transition={{ type: "spring", stiffness: 260, damping: 18 }}
-                        className="relative bg-white/15 backdrop-blur-sm rounded-xl p-5 border border-white/20 cursor-pointer overflow-hidden"
-                      >
-                        {/* Glow */}
+                    {/* LEFT CONTENT: HYPER-STYLIZED */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, cubicBezier: [0.16, 1, 0.3, 1] }}
+                        className="lg:col-span-7"
+                    >
                         <motion.div
-                          className="absolute inset-0 rounded-xl"
-                          initial={{ opacity: 0 }}
-                          whileHover={{ opacity: 1 }}
-                          transition={{ duration: 0.3 }}
-                          style={{
-                            background:
-                              "radial-gradient(circle at top, rgba(255,255,255,0.18), transparent 65%)",
-                          }}
-                        />
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.5 }}
+                            className="inline-flex items-center gap-2 px-5 py-2 rounded-2xl border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[11px] font-black uppercase tracking-[0.4em] mb-10 shadow-[0_0_30px_rgba(26,137,229,0.2)]"
+                        >
+                            <Sparkles size={14} className="animate-spin-slow text-blue-400" />
+                            Tamil Nadu's Digital Pride
+                        </motion.div>
 
-                        <div className="relative flex flex-col items-center text-center z-10">
-                          {/* Icon pop */}
-                          <motion.div
-                            whileHover={{ scale: 1.15 }}
-                            transition={{ duration: 0.25 }}
-                          >
-                            <Icon className="h-8 w-8 text-white mb-3" />
-                          </motion.div>
+                        <h1 className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-10 tracking-tighter">
+                            THE POWER OF <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-fuchsia-400 to-blue-600 drop-shadow-[0_0_15px_rgba(26,137,229,0.5)] uppercase">TCCL NETWORK</span>
+                        </h1>
 
-                          <div className="text-3xl font-bold text-white mb-1">
-                            {stat.number}
-                          </div>
-                          <div className="text-white font-medium text-sm">
-                            {stat.label}
-                          </div>
+                        <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-xl font-semibold border-l-4 border-blue-600/50 pl-6 italic">
+                            Delivering high-quality digital cable television and broadband services
+                            through a state-wide fiber optic backbone across Tamil Nadu.
+                        </p>
+
+                        <div className="flex flex-wrap gap-6">
+                            <motion.a
+                                href="/channelPackage"
+                                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(26,137,229,0.5)" }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-12 py-6 bg-gradient-to-r from-blue-600 via-[#1a89e5] to-blue-700 text-white rounded-[2rem] font-black text-sm uppercase tracking-widest flex items-center gap-3 transition-all shadow-2xl"
+                            >
+                                Get Started <ChevronRight size={20} />
+                            </motion.a>
+                            <motion.a
+                                href="/contact"
+                                whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.05)" }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-12 py-6 bg-white/5 backdrop-blur-3xl border border-white/10 text-white rounded-[2rem] font-black text-sm uppercase tracking-widest transition-all"
+                            >
+                                Contact Us
+                            </motion.a>
                         </div>
-                      </motion.div>
-                    );
-                  })}
 
+                        {/* PREMIUM BADGES
+                        <div className="flex justify-center gap-16 mt-20 pt-12 border-t border-white/10">
+                            {[
+                                { count: '3M+', label: 'CONNECTED', icon: Zap, color: 'blue' },
+                                { count: '500+', label: 'COMMAND', icon: Tv, color: 'pink' },
+                                { count: '100+', label: 'CENTERS', icon: ShieldCheck, color: 'blue' }
+                            ].map((stat, i) => (
+                                <div key={i} className="group cursor-pointer">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <stat.icon size={16} className={stat.color === 'blue' ? "text-blue-500" : "text-pink-500"} />
+                                        <div className="text-3xl font-black text-white tracking-tighter group-hover:text-blue-400 transition-all">{stat.count}</div>
+                                    </div>
+                                    <div className="text-[10px] text-gray-500 font-black uppercase tracking-[0.2em]">{stat.label}</div>
+                                </div>
+                            ))}
+                        </div> */}
+                    </motion.div>
+
+                    {/* RIGHT CONTENT: FLOATING INTERACTIVE GRID */}
+                    <div className="lg:col-span-5 grid grid-cols-2 gap-6 relative">
+                        {[
+                            { icon: Tv, title: 'Cable TV', gradient: 'from-[#1a89e5] to-blue-700' },
+                            { icon: Wifi, title: 'Fiber Net', gradient: 'from-pink-500 to-fuchsia-600' },
+                            { icon: ShieldCheck, title: 'Security', gradient: 'from-blue-600 to-[#1a89e5]' },
+                            { icon: Play, title: 'HD', gradient: 'from-fuchsia-600 to-pink-500' },
+                        ].map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.8 + idx * 0.1, duration: 0.8 }}
+                                whileHover={{ y: -15, scale: 1.05 }}
+                                className="relative rounded-[3rem] p-8 aspect-square bg-gradient-to-br from-white/10 to-transparent border border-white/10 backdrop-blur-2xl flex flex-col items-center justify-center text-center group transition-all"
+                            >
+                                <div className={`w-16 h-16 rounded-[1.5rem] bg-gradient-to-br ${item.gradient} flex items-center justify-center text-white mb-6 shadow-2xl group-hover:shadow-[0_0_30px_rgba(26,137,229,0.3)] transition-all`}>
+                                    <item.icon size={32} />
+                                </div>
+                                <h3 className="text-white font-black text-lg uppercase tracking-tight">{item.title}</h3>
+                                <div className="absolute inset-0 rounded-[3rem] border-2 border-transparent group-hover:border-blue-500/50 transition-all" />
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+                                        {/* PREMIUM BADGES */}
+                        <div className="flex justify-center gap-16 mt-20 pt-12 border-t border-white/10">
+                            {[
+                                { count: '3M+', label: 'CONNECTED', icon: Zap, color: 'blue' },
+                                { count: '500+', label: 'COMMAND', icon: Tv, color: 'pink' },
+                                { count: '100+', label: 'CENTERS', icon: ShieldCheck, color: 'blue' }
+                            ].map((stat, i) => (
+                                <div key={i} className="group cursor-pointer">
+                                    <div className="flex items-center gap-2 mb-2">
+                                        <stat.icon size={16} className={stat.color === 'blue' ? "text-blue-500" : "text-pink-500"} />
+                                        <div className="text-3xl font-black text-white tracking-tighter group-hover:text-blue-400 transition-all">{stat.count}</div>
+                                    </div>
+                                    <div className="text-[10px] text-gray-500 font-black uppercase tracking-[0.2em]">{stat.label}</div>
+                                </div>
+                            ))}
+                        </div>
+            </div>
+
+            {/* DECORATIVE NEON BAR */}
+            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#1a89e5] via-pink-500 to-transparent opacity-50" />
+
+            {/* Global Styles for Animations */}
+            <style>{`
+                @keyframes spin-slow {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                }
+                .animate-spin-slow {
+                    animation: spin-slow 8s linear infinite;
+                }
+            `}</style>
+        </section>
 
       {/* OUR STORY SECTION */}
       <section className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
@@ -353,10 +382,10 @@ export const AboutPage = () => {
 
                 <ul className="space-y-4">
                   {[
-                    "First MSO to implement DAS environment successfully",
-                    "Largest fiber network in Tamil Nadu cable industry",
-                    "Award-winning customer service and support",
-                    "Pioneer in HD and digital content delivery"
+                    "One of the first MSOs to successfully implement DAS",
+                    "One of the largest fiber networks in Tamil Nadu’s cable industry",
+                    "Committed to high standards of customer service and support",
+                    "Among the early adopters of HD and digital content delivery",
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3">
                       <CheckCircle className="h-6 w-6 text-blue-500 mt-0.5 flex-shrink-0" />
@@ -372,34 +401,31 @@ export const AboutPage = () => {
           <div className="bg-gray-900 rounded-2xl shadow-xl p-8 border border-white/10">
             <h3 className="text-3xl font-bold mb-10 text-center text-white">Milestone Journey</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {achievements.map((achievement, idx) => {
-                const Icon = achievement.icon;
-                return (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    className="text-center group"
-                  >
-                    <div className="relative flex justify-center">
-                      {/* Main Icon Circle */}
-                      <div className={`relative w-24 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="h-10 w-10 text-white" />
-
-                        {/* Year Badge - Perfectly Centered at Top */}
-                        <div className="absolute -top-5 inset-x-0 mx-auto w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center text-blue-500 font-bold text-lg shadow-md border-2 border-white/10">
-
-                          {achievement.year}
-                        </div>
-                      </div>
+              {achievements.map((achievement, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="text-center group"
+                >
+                  <div className="relative flex justify-center mb-6">
+                    {/* Year Badge Only */}
+                    <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center text-blue-500 font-bold text-lg shadow-md border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                      {achievement.year}
                     </div>
-                    <h4 className="font-bold text-white mb-2">{achievement.title}</h4>
-                    <p className="text-gray-400 text-sm">{achievement.desc}</p>
-                  </motion.div>
-                );
-              })}
+                  </div>
+
+                  <h4 className="font-bold text-white mb-2">
+                    {achievement.title}
+                  </h4>
+                  <p className="text-gray-400 text-sm">
+                    {achievement.desc}
+                  </p>
+                </motion.div>
+              ))}
+
             </div>
           </div>
         </div>
@@ -472,9 +498,9 @@ export const AboutPage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, idx) => {
-              const Icon = service.icon;
+              // const Icon = service.icon;
               return (
                 <motion.div
                   key={idx}
@@ -491,16 +517,13 @@ export const AboutPage = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                    <div className="absolute top-4 right-4 w-12 h-12 bg-blue-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/10">
+                    {/* <div className="absolute top-4 right-4 w-12 h-12 bg-blue-500/20 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/10">
                       <Icon className="h-6 w-6 text-white" />
-                    </div>
+                    </div> */}
                   </div>
                   <div className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                     <p className="text-gray-400 mb-6">{service.desc}</p>
-                    <div className="flex items-center gap-2 text-blue-500 font-semibold hover:gap-3 transition-all cursor-pointer">
-                      Discover More <ChevronRight className="h-4 w-4" />
-                    </div>
                   </div>
                 </motion.div>
               );
@@ -575,8 +598,7 @@ export const AboutPage = () => {
                 <h3 className="text-3xl font-bold text-white">Our Mission</h3>
               </div>
               <p className="text-white/90 text-lg leading-relaxed">
-                To revolutionize digital connectivity by delivering exceptional, innovative cable and broadband solutions that exceed expectations while ensuring unparalleled customer satisfaction, bringing world-class entertainment and seamless connectivity to every home in South India.
-              </p>
+                To enhance digital connectivity by delivering reliable, innovative cable television and broadband solutions, focused on quality, technology, and customer experience, while bringing rich digital entertainment and seamless connectivity to households across our service regions              </p>
             </motion.div>
 
             <motion.div
@@ -592,7 +614,7 @@ export const AboutPage = () => {
                 <h3 className="text-3xl font-bold text-white">Our Vision</h3>
               </div>
               <p className="text-white/90 text-lg leading-relaxed">
-                To emerge as South India's most trusted and technologically advanced Multi System Operator, setting industry benchmarks for digital entertainment quality, broadband reliability, and customer-centric innovation while expanding our footprint across new regions and services.
+                To become one of South India’s most trusted and technologically advanced Multi System Operators, recognized for digital entertainment quality, network reliability, and customer-centric innovation, while steadily expanding into new regions and services
               </p>
             </motion.div>
           </div>
@@ -604,15 +626,10 @@ export const AboutPage = () => {
             viewport={{ once: true }}
             className="text-center mt-16"
           >
-            <h3 className="text-3xl font-bold text-white mb-6">Join Our Digital Revolution</h3>
+            <h3 className="text-3xl font-bold text-white mb-6">Join Our Digital Journey</h3>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-              Be part of Tamil Nadu's fastest growing digital entertainment network
+              Be part of a growing digital entertainment network transforming connectivity across Tamil Nadu and beyond
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all">
-                Explore Careers
-              </button>
-            </div>
           </motion.div>
         </div>
       </section>

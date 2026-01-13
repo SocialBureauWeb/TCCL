@@ -7,10 +7,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const showcaseItems = [
-  { id: 1, src: '/assets/1.png' },
-  { id: 2, src: '/assets/3.png' },
-  { id: 3, src: '/assets/tccl2.png' },
-  { id: 4, src: '/assets/paytm2.png' }
+    { id: 1, src: '/assets/1.png' },
+    { id: 2, src: '/assets/3.png' },
+    { id: 3, src: '/assets/tccl2.png' },
+    { id: 4, src: '/assets/paytm2.png' }
 ];
 
 export const PlansSection = () => {
@@ -26,9 +26,10 @@ export const PlansSection = () => {
     }, [isAutoPlaying]);
 
     return (
-        <section className="py-32 bg-[#030005] relative overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="relative h-[600px] md:h-[750px] w-full rounded-[4rem] overflow-hidden bg-[#000a1a]">
+        <section className="py-2 sm:py-2 bg-[#030005] relative overflow-hidden w-full">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+                {/* <div className="relative h-[400px] sm:h-[600px] md:h-[750px] w-full rounded-[4rem] overflow-hidden bg-[#000a1a]"> */}
+                <div className="relative h-[300px] sm:h-[600px] md:h-[750px] w-full overflow-hidden">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentIndex}

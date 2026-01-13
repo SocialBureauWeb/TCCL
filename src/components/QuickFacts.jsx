@@ -85,7 +85,7 @@ export default function QuickFacts() {
                 </div>
 
                 {/* STATS BRUTALIST GRID: NEON CARDS */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                     {stats.map((s, idx) => (
                         <motion.div
                             key={idx}

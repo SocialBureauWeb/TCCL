@@ -30,16 +30,16 @@ const coreServices = [
 
 export default function SecondarySection() {
     return (
-        <section className="py-32 bg-[#030005] relative overflow-hidden">
+        <section className="py-16 sm:py-32 bg-[#030005] relative overflow-hidden w-full">
 
             {/* AMBIENT BACKGROUND - TCCL BLUE FOCUS */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-600/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-pink-600/5 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
                 {/* HEADER: HYPER-STYLIZED */}
-                <div className="text-center mb-24">
+                <div className="text-center mb-12 sm:mb-24">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -49,11 +49,11 @@ export default function SecondarySection() {
                         <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[11px] font-black uppercase tracking-[0.4em] mb-10 shadow-[0_0_20px_rgba(26,137,229,0.15)]">
                             <Star size={14} fill="currentColor" /> Strategic Infrastructure
                         </div>
-                        <h2 className="text-5xl md:text-7xl font-black text-white leading-tight tracking-tighter uppercase italic">
+                        <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white leading-tight tracking-tighter uppercase italic">
                             A LEGACY OF <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-white to-pink-500">DIGITAL MASTERCLASS</span>
                         </h2>
-                        <p className="text-xl text-gray-500 mx-auto mt-10 font-bold border-t border-white/5 pt-10 uppercase tracking-widest text-center whitespace-nowrap">
+                        <p className="text-sm sm:text-base lg:text-xl text-gray-500 mx-auto mt-6 sm:mt-10 font-bold border-t border-white/5 pt-6 sm:pt-10 uppercase tracking-widest text-center break-words">
                             Elevating South India's digital landscape since 2012
                         </p>
 
@@ -61,7 +61,7 @@ export default function SecondarySection() {
                 </div>
 
                 {/* SERVICES GRID */}
-                <div className="grid lg:grid-cols-3 gap-10 mb-40">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 mb-20 sm:mb-40">
                     {coreServices.map((service, i) => (
                         <motion.div
                             key={i}
@@ -84,10 +84,10 @@ export default function SecondarySection() {
                 </div>
 
                 {/* SPOTLIGHT SECTION: CINEMATIC BRIGHTNESS */}
-                <div className="relative rounded-[5rem] overflow-hidden bg-gradient-to-br from-white/5 to-[#050510] border border-white/10 p-12 lg:p-24 shadow-[0_50px_100px_rgba(0,0,0,1)]">
+                <div className="relative rounded-[2rem] sm:rounded-[5rem] overflow-hidden bg-gradient-to-br from-white/5 to-[#050510] border border-white/10 p-6 sm:p-12 lg:p-24 shadow-[0_50px_100px_rgba(0,0,0,1)]">
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-pink-600/10 pointer-events-none" />
 
-                    <div className="grid lg:grid-cols-2 gap-24 items-center relative z-10">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-24 items-center relative z-10">
 
                         {/* HYPER-BRIGHT VISUAL */}
                         <motion.div
@@ -116,12 +116,12 @@ export default function SecondarySection() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 1 }}
                             >
-                                <h3 className="text-4xl md:text-6xl font-black text-white mb-10 leading-tight tracking-tighter uppercase italic drop-shadow-2xl">
+                                <h3 className="text-2xl sm:text-4xl md:text-6xl font-black text-white mb-6 sm:mb-10 leading-tight tracking-tighter uppercase italic drop-shadow-2xl">
                                     SYNCING <span className="text-[#1a89e5] uppercase">EMOTIONS</span> WITH TECHNOLOGY
                                 </h3>
 
-                                <p className="text-xl text-gray-400 mb-14 font-semibold leading-relaxed max-w-xl italic border-l-2 border-blue-500 pl-8">
-                                    Experience the pinnacle of digital delivery. Unwavering stability, hyper-local pride, and a fiber-backbone built to dominate the future.
+                                <p className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-14 font-semibold leading-relaxed max-w-xl italic border-l-2 border-blue-500 pl-4 sm:pl-8">
+                                    Experience the pinnacle of digital delivery Unwavering stability, hyper-local pride, and a fiber-backbone built to dominate the future.
                                 </p>
 
                                 <div className="grid sm:grid-cols-2 gap-10">

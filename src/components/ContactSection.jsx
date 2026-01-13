@@ -32,14 +32,14 @@ export const ContactSection = () => {
     ];
 
     return (
-        <footer className="bg-[#030005] text-white overflow-hidden relative">
+        <footer className="bg-[#030005] text-white overflow-hidden relative w-full">
             {/* 2. MAIN FOOTER GRID (3 COLUMNS) */}
-            <div className="max-w-7xl mx-auto px-6 py-24 border-y border-white/5 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-2 border-y border-white/5 relative">
                 {/* Decorative Neon Auras */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/5 blur-[100px] pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-96 h-96 bg-pink-600/5 blur-[100px] pointer-events-none" />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-20 relative z-10">
 
                     {/* Column 1: Contact Details */}
                     <div>
@@ -73,16 +73,30 @@ export const ContactSection = () => {
                     </div>
 
                     {/* Column 2: Quick Links */}
-                    <div>
-                        <h4 className="text-white font-black text-[11px] uppercase tracking-[0.5em] mb-12 italic border-l-2 border-blue-600 pl-6">Navigation</h4>
-                        <ul className="grid grid-cols-1 gap-6">
+                    {/* Column 3: Navigation (RIGHT SIDE) */}
+                    <div className="lg:col-start-3 lg:justify-self-end text-right">
+
+                        <ul className="space-y-6">
                             {footerLinks.map((link) => (
                                 <li key={link.name}>
                                     <Link
                                         to={link.path}
-                                        className="text-gray-500 hover:text-white font-black text-[13px] uppercase tracking-[0.3em] transition-all flex items-center gap-4 group"
+                                        className="
+            flex flex-row-reverse items-center justify-end gap-4
+            text-gray-500 hover:text-white
+            font-black text-[13px] uppercase tracking-[0.3em]
+            transition-all group
+          "
                                     >
-                                        <ChevronRight size={16} className="text-blue-500 opacity-0 group-hover:opacity-100 -ml-4 group-hover:ml-0 transition-all font-bold" />
+                                        <ChevronRight
+                                            size={16}
+                                            className="
+              text-blue-500 font-bold
+              opacity-0 group-hover:opacity-100
+              translate-x-2 group-hover:translate-x-0
+              transition-all
+            "
+                                        />
                                         {link.name}
                                     </Link>
                                 </li>
@@ -90,13 +104,17 @@ export const ContactSection = () => {
                         </ul>
                     </div>
 
+
                 </div>
-                <br />
-                <img
-                    src="/assets/footer.jpg"
-                    alt="footer-img"
-                    className="h-16 transition-transform group-hover:scale-105"
-                />
+
+                {/* Footer Image - Fixed responsive overflow */}
+                <div className="relative -mx-4 sm:-mx-6 mt-6 sm:mt-8 overflow-hidden">
+                    <img
+                        src="/assets/footer.jpg"
+                        alt="footer-img"
+                        className="w-full h-auto block"
+                    />
+                </div>
             </div>
 
         </footer>

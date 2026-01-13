@@ -36,7 +36,7 @@ const valueProps = [
 
 export const OTTSection = () => {
     return (
-        <section className="py-32 bg-[#030005] relative overflow-hidden">
+        <section className="bg-[#030005] relative overflow-hidden">
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-12 gap-24 items-center">
@@ -49,16 +49,16 @@ export const OTTSection = () => {
                         transition={{ duration: 1 }}
                         className="lg:col-span-6 relative"
                     >
-                            <img 
-                               src="/assets/Landing page 5.jpg"
-                                    alt=""
-                                    className="absolute inset-0 w-full h-full object-cover opacity-40 blur-3xl scale-110 rounded-3xl pointer-events-none"
-                                />
-                                <img
-                                    src="/assets/Landing page 5.jpg"
-                                    alt="Digital Infrastructure"
-                                    className="relative w-full h-full object-contain brightness-150 saturate-150 transition-all duration-700 pointer-events-none"
-                                />
+                        <img
+                            src="/assets/Landing page 5.jpg"
+                            alt=""
+                            className="absolute inset-0 w-full h-full object-cover opacity-40 blur-3xl scale-110 rounded-3xl pointer-events-none"
+                        />
+                        <img
+                            src="/assets/Landing page 5.jpg"
+                            alt="Digital Infrastructure"
+                            className="relative w-full h-full object-contain brightness-150 saturate-150 transition-all duration-700 pointer-events-none"
+                        />
                     </motion.div>
 
                     {/* CONTENT SIDE */}
@@ -81,7 +81,7 @@ export const OTTSection = () => {
                             </p>
                         </motion.div>
 
-                        <div className="grid sm:grid-cols-2 gap-10">
+                        <div className="grid sm:grid-cols-2 gap-10 mb-10">
                             {valueProps.map((prop, i) => (
                                 <motion.div
                                     key={i}

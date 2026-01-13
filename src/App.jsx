@@ -17,12 +17,12 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path='/about' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/declaration' element={<Declare />} />
           <Route path='/channelPackage' element={<ChannelTables />} />
           <Route path='/network' element={<NetworkPage />} />
           <Route path='/cpeScheme' element={<CPESchemes />} />
-          <Route path='/' element={<AboutPage />} />
+          <Route path='/about' element={<AboutPage />} />
           <Route path='/broadcast' element={<BroadcastersDashboard />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/terms' element={<Terms />} />

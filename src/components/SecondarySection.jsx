@@ -297,7 +297,7 @@ export default function SecondarySection() {
                                 transition={{ duration: 1 }}
                             >
                                 <h3 className="text-2xl sm:text-4xl md:text-6xl font-black text-white mb-6 sm:mb-10 leading-tight tracking-tighter uppercase italic drop-shadow-2xl">
-                                    SYNCING <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] to-pink-500 uppercase">EMOTIONS</span> WITH TECHNOLOGY
+                                    SYNCING EMOTIONS WITH TECHNOLOGY
                                 </h3>
 
                                 <p className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-14 font-semibold leading-relaxed max-w-xl italic border-l-2 border-blue-500 pl-4 sm:pl-8">

@@ -32,7 +32,7 @@ export const ContactSection = () => {
     ];
 
     return (
-        <footer className="bg-[#030005] text-white overflow-hidden relative w-full">
+        <footer className="bg-[#030005] text-white overflow-hidden relative w-full mt-4">
             {/* 2. MAIN FOOTER GRID (3 COLUMNS) */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-2 border-y border-white/5 relative">
                 {/* Decorative Neon Auras */}
@@ -43,7 +43,7 @@ export const ContactSection = () => {
 
                     {/* Column 1: Contact Details */}
                     <div>
-                        <div className="space-y-8">
+                        <div className="space-y-8 mt-4">
                             <div className="flex gap-5 group">
                                 <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-xl">
                                     <MapPin size={22} />
@@ -76,7 +76,7 @@ export const ContactSection = () => {
                     {/* Column 3: Navigation (RIGHT SIDE) */}
                     <div className="lg:col-start-3 lg:justify-self-end text-right">
 
-                        <ul className="space-y-6">
+                        <ul className="space-y-6 mt-3">
                             {footerLinks.map((link) => (
                                 <li key={link.name}>
                                     <Link

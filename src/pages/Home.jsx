@@ -7,7 +7,7 @@ import React, { useEffect } from 'react'
 import { Navbar } from '../components/Navbar';
 import HeroBanner from '../components/HeroBanner'
 import SecondarySection from '../components/SecondarySection'
-import PlansSection from '../components/PlansSection'
+// import PlansSection from '../components/PlansSection'
 import OTTSection from '../components/OTTSection'
 import QuickFacts from '../components/QuickFacts'
 import AboutSection from '../components/AboutSection'
@@ -25,7 +25,7 @@ export const Home = () => {
         <HeroBanner />
         <SecondarySection />
         <AboutSection />
-        <PlansSection />
+        {/* <PlansSection /> */}
         <OTTSection />
         <QuickFacts />
         <ContactSection />

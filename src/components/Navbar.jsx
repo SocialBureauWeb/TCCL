@@ -9,15 +9,26 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
   const wrapperRef = useRef(null)
 
   useEffect(() => {
-    function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+    function handleOutside(event) {
+      if (!wrapperRef.current) return
+
+      if (!wrapperRef.current.contains(event.target)) {
+        setMobileOpen(false)
         setOpenDropdown(null)
         setOperatorOpen(false)
       }
     }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [wrapperRef])
+
+    document.addEventListener('mousedown', handleOutside)
+    document.addEventListener('touchstart', handleOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutside)
+      document.removeEventListener('touchstart', handleOutside)
+    }
+  }, [])
+
+
 
   const menu = [
     { title: 'Home', href: '/' },
@@ -91,10 +102,13 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
                               <a
                                 key={it.title}
                                 href={it.href}
+                                target={it.href.endsWith('.pdf') ? '_blank' : undefined}
+                                rel={it.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
                                 className="block px-4 py-2 hover:bg-gray-700 first:rounded-t-md last:rounded-b-md"
                               >
                                 {it.title}
                               </a>
+
                             ))}
                           </div>
                         </>
@@ -186,11 +200,14 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
               )}
             </div> */}
 
-            <div className="relative hidden md:block">
+            {/* Operator Login - Desktop (Hover) */}
+            <div
+              className="relative hidden md:block"
+              onMouseEnter={() => setOperatorOpen(true)}
+              onMouseLeave={() => setOperatorOpen(false)}
+            >
               <button
-                onClick={() => setOperatorOpen(!operatorOpen)}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-1 rounded-full font-medium shadow-sm hover:shadow-lg hover:shadow-blue-500/50 transition-all"
-                aria-expanded={operatorOpen}
                 aria-haspopup="menu"
               >
                 <FaUser size={16} />
@@ -218,6 +235,7 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
                 </div>
               )}
             </div>
+
 
             {/* Mobile operator button - ONLY ONE */}
             <div className="relative md:hidden">
@@ -255,24 +273,34 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
         </div>
 
         {/* Mobile menu */}
+        {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden pb-4 z-50">
+          <div className="md:hidden pb-4 z-50 bg-black">
             {menu.map((m) => (
               <div key={m.title}>
                 {m.items ? (
                   <>
                     <button
-                      onClick={() => setOpenDropdown(openDropdown === m.title ? null : m.title)}
+                      onClick={() =>
+                        setOpenDropdown(openDropdown === m.title ? null : m.title)
+                      }
                       className="w-full text-left px-4 py-2 hover:bg-gray-800"
                     >
                       {m.title}
                     </button>
+
                     {openDropdown === m.title && (
-                      <div className="bg-gray-800 z-50">
+                      <div className="bg-gray-800">
                         {m.items.map((it) => (
                           <a
                             key={it.title}
                             href={it.href}
+                            target={it.href.endsWith('.pdf') ? '_blank' : undefined}
+                            rel={it.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
+                            onClick={() => {
+                              setMobileOpen(false)
+                              setOpenDropdown(null)
+                            }}
                             className="block pl-8 pr-4 py-2 hover:bg-gray-700"
                           >
                             {it.title}
@@ -282,19 +310,16 @@ export const Navbar = ({ logo = '/assets/logo.png' }) => {
                     )}
                   </>
                 ) : (
-                  <a href={m.href} className="block px-4 py-2 hover:bg-gray-800">
+                  <a
+                    href={m.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block px-4 py-2 hover:bg-gray-800"
+                  >
                     {m.title}
                   </a>
                 )}
               </div>
             ))}
-            <button
-              onClick={() => setMobileOpen(false)}
-              className="w-full text-left px-4 py-2 hover:bg-gray-800 mt-2 border-t border-gray-700"
-              aria-haspopup="menu"
-            >
-              Operator Login
-            </button>
           </div>
         )}
       </div>

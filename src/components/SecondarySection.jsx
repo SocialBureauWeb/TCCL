@@ -180,12 +180,12 @@ const coreServices = [
 
 export default function SecondarySection() {
     return (
-        <section className="py-16 sm:py-32 bg-gradient-to-br from-black via-[#0a0a1a] to-[#050510] relative overflow-hidden w-full">
+        <section className="py-12 sm:py-32 bg-gradient-to-br from-black via-[#0a0a1a] to-[#050510] relative overflow-hidden w-full">
 
             {/* AMBIENT BACKGROUND - BLUE & PINK FOCUS */}
             <div className="absolute top-0 right-0 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-to-r from-blue-600/15 via-pink-600/10 to-transparent rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-[250px] sm:w-[400px] h-[250px] sm:h-[400px] bg-gradient-to-r from-pink-600/10 via-blue-600/10 to-transparent rounded-full blur-[100px] pointer-events-none" />
-            
+
             {/* THE WAY FORWARD SECTION */}
             <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-full max-w-5xl px-4 z-0">
                 <div className="text-center">
@@ -248,7 +248,7 @@ export default function SecondarySection() {
                         >
                             {/* HOVER GLOW EFFECT */}
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                            
+
                             <div className="relative z-10">
                                 <div className={`w-20 h-20 rounded-[2rem] bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white mb-10 group-hover:rotate-12 transition-transform shadow-2xl group-hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]`}>
                                     <service.icon size={36} />

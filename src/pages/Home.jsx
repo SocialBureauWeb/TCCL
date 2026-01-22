@@ -5,7 +5,7 @@
 
 import React, { useEffect } from 'react'
 import { Navbar } from '../components/Navbar';
-import HeroBanner from '../components/HeroBanner'
+import HeroBanner from '../components/HeroBannerWithCarousel'
 import SecondarySection from '../components/SecondarySection'
 // import PlansSection from '../components/PlansSection'
 import OTTSection from '../components/OTTSection'

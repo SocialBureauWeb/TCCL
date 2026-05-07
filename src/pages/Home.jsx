@@ -24,7 +24,7 @@ export const Home = () => {
 
     const img = new Image();
 
-    img.src = imagePath;
+    img.src = `${imagePath}?t=${Date.now()}`;
 
     img.onload = () => {
       setPopupImage(imagePath);

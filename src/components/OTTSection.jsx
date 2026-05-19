@@ -74,7 +74,7 @@ export const OTTSection = () => {
                             </div>
                             <h2 className="text-5xl md:text-7xl font-black text-white mb-10 tracking-tighter leading-[0.9] uppercase italic">
                                 BULLETPROOF <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-white to-pink-500">DIGITAL LIFE.</span>
+                                <span className="text-white">DIGITAL LIFE.</span>
                             </h2>
                             <p className="text-xl text-gray-500 font-semibold mb-16 leading-relaxed max-w-xl italic border-l-4 border-blue-600 pl-10">
                                 We've engineered the matrix of Tamil Nadu's digital future. Hyper-redundant fiber routes and sovereign command centers ensure your world never goes dark.
@@ -97,7 +97,7 @@ export const OTTSection = () => {
                                         </div>
                                         <h4 className="text-white font-black text-lg tracking-tighter uppercase italic group-hover:text-blue-400 transition-colors">{prop.title}</h4>
                                     </div>
-                                    <p className="text-sm text-gray-400 font-bold leading-relaxed border-t border-white/5 pt-4">{prop.desc}</p>
+                                    <p className="text-sm text-white font-bold leading-relaxed pt-4">{prop.desc}</p>
                                 </motion.div>
                             ))}
                         </div>

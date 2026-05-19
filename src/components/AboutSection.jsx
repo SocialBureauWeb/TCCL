@@ -26,7 +26,7 @@ export const AboutSection = () => {
                         </div>
                         <h2 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight sm:leading-none tracking-tighter uppercase italic mb-4 sm:mb-8">
                             WHO RUN <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1a89e5] via-white to-pink-500 drop-shadow-[0_0_15px_rgba(26,137,229,0.4)]">THE SHOW</span>
+                            <span className="text-white bg-clip-text drop-shadow-[0_0_15px_rgba(26,137,229,0.4)]">THE SHOW</span>
                         </h2>
                         <div className="w-16 sm:w-24 h-1.5 sm:h-2 bg-gradient-to-r from-[#1a89e5] to-pink-500 rounded-full mx-auto lg:mx-0" />
                     </motion.div>

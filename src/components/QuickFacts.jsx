@@ -78,7 +78,7 @@ export default function QuickFacts() {
                         </div>
                         <h2 className="text-5xl md:text-8xl font-black text-white mb-10 tracking-tighter uppercase italic leading-[0.9]">
                             LEADING THE <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-white to-blue-500 drop-shadow-[0_0_15px_rgba(217,70,239,0.3)]">DIGITAL RACE.</span>
+                            <span className="text-white drop-shadow-[0_0_15px_rgba(217,70,239,0.3)]">DIGITAL RACE.</span>
                         </h2>
                         <div className="w-48 h-1.5 bg-gradient-to-r from-pink-600 to-blue-600 mx-auto rounded-full mb-10" />
                     </motion.div>

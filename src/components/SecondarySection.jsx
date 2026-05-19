@@ -81,9 +81,9 @@ export default function SecondarySection() {
                         </div>
                         <h2 className="text-3xl sm:text-5xl md:text-7xl font-black text-white leading-tight tracking-tighter uppercase italic">
                             A LEGACY OF <br />
-                            <span className="text-pink-900 bg-clip-text bg-gradient-to-r from-[#1a89e5] via-pink-900 to-pink-900">DIGITAL MASTERCLASS</span>
+                            <span className="text-white bg-clip-text ">DIGITAL MASTERCLASS</span>
                         </h2>
-                        <p className="text-sm sm:text-base lg:text-xl text-gray-600 mx-auto mt-6 sm:mt-10 font-bold border-t border-white/5 pt-6 sm:pt-10 uppercase tracking-widest text-center break-words">
+                        <p className="text-sm sm:text-base lg:text-xl text-white mx-auto mt-6 sm:mt-10 font-bold border-t border-white/5 pt-6 sm:pt-10 uppercase tracking-widest text-center break-words">
                             Elevating South India's digital landscape since 2012
                         </p>
                     </motion.div>
@@ -109,7 +109,7 @@ export default function SecondarySection() {
                                     <service.icon size={36} />
                                 </div>
                                 <h3 className="text-2xl font-black text-white mb-6 tracking-tight group-hover:text-blue-400 transition-colors uppercase italic">{service.title}</h3>
-                                <p className="text-base text-gray-400 font-bold leading-relaxed mb-10 group-hover:text-gray-300 transition-colors">{service.desc}</p>
+                                <p className="text-base text-white font-bold leading-relaxed mb-10 group-hover:text-gray-300 transition-colors">{service.desc}</p>
                             </div>
                         </motion.div>
                     ))}
